@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a React portfolio site built with [Next.js](https://nextjs.org).
 
 ## Getting Started
 
@@ -29,8 +29,18 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## GitHub Pages Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This repository is configured to deploy only bundled static output to GitHub Pages.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Developers push the React/Next.js source code to `main`.
+- GitHub Actions runs on every `main` push.
+- The workflow installs dependencies with `pnpm install --frozen-lockfile`.
+- The workflow runs `pnpm build`, which executes `next build`.
+- `next.config.ts` uses `output: "export"`, so the static site is generated in `out/`.
+- Only the `out/` folder is uploaded with `actions/upload-pages-artifact`.
+- GitHub Pages serves the bundled `index.html`, JavaScript, CSS, and public assets from that artifact.
+
+Because this is a user site repository (`designer-su.github.io`), the site is served from the domain root. No Vite `base` setting is used because this project is not Vite-based.
+
+In GitHub, set **Settings -> Pages -> Build and deployment -> Source** to **GitHub Actions**.
