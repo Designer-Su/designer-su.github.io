@@ -50,7 +50,7 @@ export default async function ProjectPage({
   const isRealProject = project.slug === 'solid-connection' || project.slug === 'camerafi-studio';
   const isSolidConnection = project.slug === 'solid-connection';
   const solidConnectionProblemImage = isSolidConnection
-    ? "/Solid%20Connection%20Problem.png"
+    ? "/SC/Solid%20Connection%20Problem.png"
     : null;
   const cameraFiResearchChart = project.slug === 'camerafi-studio'
     ? (project.research as any).chart

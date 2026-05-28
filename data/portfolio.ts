@@ -60,7 +60,7 @@ export const portfolioData = {
         team: "2 PMs | 2 Designers | 4 Frontend Developers\n5 Backend Developers",
         web: "https://www.solid-connection.com/",
         git: "https://github.com/solid-connection",
-        logo: "/solcon-logo-v2.png"
+        logo: "/SC/solcon-logo-v2.png"
       },
       colors: ["#5950F6", "#4672EE", "#388CE8", "#2AA4E2"],
       userProblem: "Prospective exchange students struggle with highly fragmented application information and a blind preparation process, relying on unverified rumors and scattered spreadsheets.",
@@ -152,18 +152,15 @@ export const portfolioData = {
         features: [
           { 
             title: "Centralized Data", 
-            description: "Replaced scattered spreadsheets with a unified, searchable global school database.", 
-            image: "/SC/main-eng.png" 
+            description: "Replaced scattered spreadsheets with a unified, searchable global school database."
           },
           { 
             title: "Predictive Application", 
-            description: "Developed a mock application system to visualize real-time competition rates and acceptance probabilities.", 
-            image: "/SC/apply.png" 
+            description: "Developed a mock application system to visualize real-time competition rates and acceptance probabilities."
           },
           { 
             title: "Verified Community", 
-            description: "Built a 1:1 mentor-mentee matching system connecting applicants with verified alumni.", 
-            image: "/SC/mentee.png" 
+            description: "Built a 1:1 mentor-mentee matching system connecting applicants with verified alumni."
           }
         ]
       },
