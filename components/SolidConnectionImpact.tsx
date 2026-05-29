@@ -8,7 +8,7 @@ export default function SolidConnectionImpact() {
         {/* Header */}
         <div className="text-center mb-2">
           <h2 className="text-sm font-black uppercase tracking-[0.28em] text-white/40 mb-4">Outcome & Impact</h2>
-          <p className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">Validated Success & Learnings</p>
+          <p className="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">Results & Learnings</p>
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-white/50">
             Based on GA4 Data: Jan 1, 2025 - Dec 16, 2025
           </span>
@@ -42,12 +42,12 @@ export default function SolidConnectionImpact() {
             <div className="flex flex-col gap-6 mb-12">
               <div className="bg-neutral-900 rounded-2xl p-6 border-l-4 border-blue-500 shadow-xl">
                 <p className="text-lg font-medium text-white/90 leading-relaxed italic">
-                  "This finally makes the exchange application predictable."
+                  &ldquo;This finally makes the exchange application predictable.&rdquo;
                 </p>
               </div>
               <div className="bg-neutral-900 rounded-2xl p-6 border-l-4 border-emerald-500 shadow-xl">
                 <p className="text-lg font-medium text-white/90 leading-relaxed italic">
-                  "I don't need to ask seniors every semester anymore."
+                  &ldquo;I don&apos;t need to ask seniors every semester anymore.&rdquo;
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function SolidConnectionImpact() {
                   Strong Seasonality
                 </h4>
                 <p className="text-white/70 leading-relaxed">
-                  Traffic spikes heavily during Jan-Feb and Sep-Oct, aligning perfectly with university application periods. This indicates the product is currently functioning as a highly trusted <strong>"season-specific problem-solving tool"</strong> rather than a habitual platform.
+                  Traffic peaks in Jan-Feb and Sep-Oct, matching university application seasons. The product works best as a trusted <strong>seasonal problem-solving tool</strong>.
                 </p>
               </div>
               <div className="flex flex-col gap-2">
@@ -73,7 +73,7 @@ export default function SolidConnectionImpact() {
                   Community-Driven Growth
                 </h4>
                 <p className="text-white/70 leading-relaxed">
-                  Referral data shows significant organic diffusion through university communities (e.g., Everytime) and messengers (Kakao). Word-of-mouth is strong among the target demographic.
+                  Referrals came from university communities and messengers such as Everytime and Kakao. Word-of-mouth was strong among exchange applicants.
                 </p>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function SolidConnectionImpact() {
                   High Churn on First Screen
                 </h4>
                 <p className="text-white/70 leading-relaxed">
-                  While inner information pages boast excellent engagement (e.g., School List at 5.6% churn), the Main Page suffers from a <strong>21.4% churn rate</strong>. This reveals a missing or weak Call-to-Action (CTA) upon first landing.
+                  Inner pages performed well, including School List at 5.6% churn. The Main Page had <strong>21.4% churn</strong>, showing that the first CTA needed to be clearer.
                 </p>
               </div>
 
@@ -118,7 +118,7 @@ export default function SolidConnectionImpact() {
                   {/* Bar 2 */}
                   <div className="relative">
                     <div className="flex justify-between text-sm font-bold text-white mb-1 relative z-10">
-                      <span>Beginner's Guide</span>
+                      <span>Beginner&apos;s Guide</span>
                       <span className="text-amber-400">6.3k / 12.5%</span>
                     </div>
                     <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
@@ -144,20 +144,20 @@ export default function SolidConnectionImpact() {
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
-                  Actionable Strategies
+                  Next Strategies
                 </h4>
                 <div className="flex flex-col gap-3 mt-2">
                   <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
                     <span className="text-sm font-bold text-emerald-400 block mb-1">1. Main UX Simplification</span>
-                    <p className="text-sm text-white/70">Unify the first-screen CTA to guide users to core actions within 60 seconds of entry.</p>
+                    <p className="text-sm text-white/70">Use one clear first-screen CTA that leads users to a core action within 60 seconds.</p>
                   </div>
                   <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
                     <span className="text-sm font-bold text-emerald-400 block mb-1">2. Retention Experiments</span>
-                    <p className="text-sm text-white/70">Implement "Save School" features and "Deadline D-3 Alerts" to encourage repeat visits and track 7/30-day retention.</p>
+                    <p className="text-sm text-white/70">Add &ldquo;Save School&rdquo; and &ldquo;D-3 Deadline Alerts&rdquo; to support repeat visits and track 7/30-day retention.</p>
                   </div>
                   <div className="bg-neutral-900/50 p-4 rounded-xl border border-white/5">
                     <span className="text-sm font-bold text-emerald-400 block mb-1">3. Data Integrity</span>
-                    <p className="text-sm text-white/70">Establish explicit conversion events (e.g., School Search, Signup) and implement robust UTM tagging for community channels.</p>
+                    <p className="text-sm text-white/70">Define conversion events such as School Search and Signup, then apply UTM tags to community channels.</p>
                   </div>
                 </div>
               </div>

@@ -10,6 +10,7 @@ import SolidConnectionSolutions from "@/components/SolidConnectionSolutions";
 import SolidConnectionImpact from "@/components/SolidConnectionImpact";
 import CameraFiSolutions from "@/components/CameraFiSolutions";
 import SmartFridgeSolutions from "@/components/SmartFridgeSolutions";
+import SmartFridgeUserFlowMap from "@/components/SmartFridgeUserFlowMap";
 import SoloWeddingResearchCharts from "@/components/SoloWeddingResearchCharts";
 import SolidConnectionUserFlowMap from "@/components/SolidConnectionUserFlowMap";
 
@@ -364,7 +365,7 @@ export default async function ProjectPage({
             <div className="mb-8 flex flex-col gap-3">
               <h2 className="text-sm font-black uppercase tracking-[0.28em] text-neutral-400">Lo-Fi Prototype</h2>
               <p className="text-lg leading-relaxed text-neutral-600">
-                Early wireframes were connected as a horizontal flow to validate the app structure, inventory management, recipe access, and feature discoverability.
+                Early wireframes mapped the app structure, inventory flow, recipe access, and feature discovery.
               </p>
             </div>
             <div className="-mx-6 overflow-x-auto px-6 pb-4">
@@ -401,40 +402,44 @@ export default async function ProjectPage({
         <section id="user-flow" className="px-6 mb-24 scroll-mt-32">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-sm font-black uppercase tracking-[0.28em] text-neutral-400 mb-12 text-center">User Flow</h2>
-            <div className="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
-              {(project as any).userFlow.map((flowGroup: any, idx: number) => {
-                const groupColor = project.colors ? project.colors[idx % project.colors.length] : null;
-                return (
-                  <div key={idx} className="flex-shrink-0 w-[85vw] md:w-[380px] snap-center flex flex-col bg-white border border-neutral-200/60 rounded-3xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300">
-                    <h3 className="text-xl font-black mb-4 tracking-tight" style={groupColor ? { color: groupColor } : { color: '#0a0a0a' }}>
-                      {flowGroup.title}
-                    </h3>
-                    {flowGroup.description && (
-                      <p className="text-neutral-600 text-sm leading-relaxed mb-6 flex-grow">
-                        {flowGroup.description}
-                      </p>
-                    )}
-                    <div className="flex flex-wrap items-center gap-2 mt-auto">
-                      {flowGroup.flow.map((step: string, sIdx: number) => (
-                        <React.Fragment key={sIdx}>
-                          <div 
-                            className="bg-neutral-50 px-3 py-1.5 rounded-lg border border-neutral-200 text-neutral-700 font-bold text-xs tracking-wide"
-                            style={groupColor ? { backgroundColor: `${groupColor}08`, borderColor: `${groupColor}20` } : {}}
-                          >
-                            {step}
-                          </div>
-                          {sIdx < flowGroup.flow.length - 1 && (
-                            <svg className="w-3 h-3 text-neutral-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                            </svg>
-                          )}
-                        </React.Fragment>
-                      ))}
+            {project.slug === 'smart-fridge' ? (
+              <SmartFridgeUserFlowMap />
+            ) : (
+              <div className="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+                {(project as any).userFlow.map((flowGroup: any, idx: number) => {
+                  const groupColor = project.colors ? project.colors[idx % project.colors.length] : null;
+                  return (
+                    <div key={idx} className="flex-shrink-0 w-[85vw] md:w-[380px] snap-center flex flex-col bg-white border border-neutral-200/60 rounded-3xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300">
+                      <h3 className="text-xl font-black mb-4 tracking-tight" style={groupColor ? { color: groupColor } : { color: '#0a0a0a' }}>
+                        {flowGroup.title}
+                      </h3>
+                      {flowGroup.description && (
+                        <p className="text-neutral-600 text-sm leading-relaxed mb-6 flex-grow">
+                          {flowGroup.description}
+                        </p>
+                      )}
+                      <div className="flex flex-wrap items-center gap-2 mt-auto">
+                        {flowGroup.flow.map((step: string, sIdx: number) => (
+                          <React.Fragment key={sIdx}>
+                            <div 
+                              className="bg-neutral-50 px-3 py-1.5 rounded-lg border border-neutral-200 text-neutral-700 font-bold text-xs tracking-wide"
+                              style={groupColor ? { backgroundColor: `${groupColor}08`, borderColor: `${groupColor}20` } : {}}
+                            >
+                              {step}
+                            </div>
+                            {sIdx < flowGroup.flow.length - 1 && (
+                              <svg className="w-3 h-3 text-neutral-300 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                              </svg>
+                            )}
+                          </React.Fragment>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+            )}
             {project.slug === 'solid-connection' && (
               <SolidConnectionUserFlowMap />
             )}
@@ -531,21 +536,62 @@ export default async function ProjectPage({
                     <h3 className="text-2xl font-black tracking-tight mb-4">{idx + 1}. {test.title}</h3>
                     <p className="text-lg text-neutral-600 leading-relaxed">{test.description}</p>
                   </div>
+
+                  {"focusAreas" in test && test.focusAreas && test.focusAreas.length > 0 && (
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                      {test.focusAreas.map((area: any) => (
+                        <div key={area.title} className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5">
+                          <h4 className="text-base font-black text-neutral-950">{area.title}</h4>
+                          <p className="mt-3 text-sm font-semibold text-neutral-700">{area.action}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-neutral-500">{area.observation}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {"findings" in test && test.findings && test.findings.length > 0 && (
+                    <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
+                      <h4 className="text-base font-black text-emerald-700">Research Findings</h4>
+                      <ul className="mt-4 flex flex-col gap-3">
+                        {test.findings.map((finding: string) => (
+                          <li key={finding} className="flex gap-3 text-sm leading-relaxed text-emerald-950">
+                            <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                            <span>{finding}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {"userQuotes" in test && test.userQuotes && test.userQuotes.length > 0 && (
+                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                      {test.userQuotes.map((quote: string) => (
+                        <blockquote
+                          key={quote}
+                          className="relative rounded-[1.5rem] border border-neutral-200 bg-white px-5 py-4 text-base font-semibold leading-relaxed text-neutral-800 shadow-sm before:absolute before:-bottom-2 before:left-8 before:h-4 before:w-4 before:rotate-45 before:border-b before:border-r before:border-neutral-200 before:bg-white after:absolute after:left-4 after:top-2 after:text-4xl after:font-black after:leading-none after:text-emerald-100 after:content-['“']"
+                        >
+                          <span className="relative z-10 block pl-4">{quote}</span>
+                        </blockquote>
+                      ))}
+                    </div>
+                  )}
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="flex flex-col gap-3">
-                      <span className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">Before</span>
-                      <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-neutral-100">
-                        <Image src={test.beforeImage} alt="Before" fill className="object-cover" />
+                  {project.slug !== 'smart-fridge' && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="flex flex-col gap-3">
+                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">Before</span>
+                        <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-neutral-100">
+                          <Image src={test.beforeImage} alt="Before" fill className="object-cover" />
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">After</span>
+                        <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-neutral-100">
+                          <Image src={test.afterImage} alt="After" fill className="object-cover" />
+                        </div>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-3">
-                      <span className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">After</span>
-                      <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-neutral-100">
-                        <Image src={test.afterImage} alt="After" fill className="object-cover" />
-                      </div>
-                    </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -665,7 +711,7 @@ export default async function ProjectPage({
       
 
       {/* 7.5 Style Guide */}
-      {(project.design as any).styleGuide && (
+      {project.slug !== 'smart-fridge' && (project.design as any).styleGuide && (
         <section id="style-guide" className="px-6 mb-32 scroll-mt-32">
           <div className="max-w-6xl mx-auto bg-neutral-950 text-white rounded-[2rem] p-8 md:p-16 overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 md:gap-16 items-center">

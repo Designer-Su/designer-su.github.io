@@ -127,7 +127,7 @@ export default function SolidConnectionUserFlowMap() {
           Interactive User Flow Map
         </h3>
         <p className="mt-2 text-neutral-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-          Explore the comprehensive, site-wide user flow of Solid Connection. Select a module to highlight specific navigation paths and derived solution nodes.
+          Select a module to see the key screens, actions, and solution points in the Solid Connection flow.
         </p>
       </div>
 

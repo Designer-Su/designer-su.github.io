@@ -218,7 +218,7 @@ export default function SolidConnectionDesignSystem() {
                 Connecting students worldwide with verified mentoring.
               </div>
               <div style={{ fontWeight: 400, fontSize: "12px", lineHeight: "150%" }} className="text-neutral-500 max-w-sm">
-                For users lost in a flood of information, the community acts as a navigation compass against information overload.
+                For users facing too much information, the community gives a clear place to start.
               </div>
             </div>
           </div>
@@ -227,4 +227,3 @@ export default function SolidConnectionDesignSystem() {
     </div>
   );
 }
-

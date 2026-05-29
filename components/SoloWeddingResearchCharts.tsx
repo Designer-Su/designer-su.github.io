@@ -85,7 +85,7 @@ export default function SoloWeddingResearchCharts() {
           Why &ldquo;Solo Wedding&rdquo;?
         </h3>
         <p className="mt-2 text-neutral-500 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
-          Behind Fiora lies a structural shift in demographics and social values: the dramatic rise of single-person households and the decline of traditional marriage.
+          Fiora responds to two clear shifts: more single-person households and fewer traditional marriages.
         </p>
       </div>
 
@@ -462,7 +462,7 @@ export default function SoloWeddingResearchCharts() {
                 Demographic Shift
               </h5>
               <p className="mt-3 text-neutral-600 text-sm md:text-base leading-relaxed">
-                As the single-person household and bihon (non-marriage) population rises, the overall number of weddings continues to decrease. Society is moving towards a structure centered on the individual rather than the traditional nuclear family.
+                As single-person households and non-marriage lifestyles grow, weddings continue to decline. This points to a culture more centered on individual life choices.
               </p>
             </div>
           </div>
@@ -480,7 +480,7 @@ export default function SoloWeddingResearchCharts() {
                 Cultural Opportunity
               </h5>
               <p className="mt-3 text-neutral-600 text-sm md:text-base leading-relaxed">
-                Moving beyond the traditional social expectations of marriage, Fiora proposes &ldquo;Solo Wedding&rdquo; as a premium, legitimate ceremony to honor self-celebration, emotional milestone marking, and personal growth.
+                Fiora reframes &ldquo;Solo Wedding&rdquo; as a premium ceremony for self-celebration, emotional milestones, and personal growth.
               </p>
             </div>
           </div>

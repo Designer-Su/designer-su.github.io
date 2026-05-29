@@ -1,9 +1,9 @@
 export const portfolioData = {
   hero: {
     greeting: "Sukyeong Lee",
-    headline: "is a UX/UI Designer delivering intuitive, data-driven experiences through user-centered design and full product ownership.",
+    headline: "is a UX/UI Designer who turns research into clear flows, usable interfaces, and measurable product results.",
     about:
-      "With a strong focus on user experience and a data-driven approach, I specialize in optimizing user flows and solving complex usability challenges through research, analytics, and iterative design. I focus on delivering user-centered solutions that enhance both usability and product performance.",
+      "I design products by turning user research, data, and fast iteration into simpler flows. My work focuses on usability, clear decision-making, and product outcomes users can feel.",
     skills: ["User Experience", "User Interface", "Prototyping", "Design Systems", "Interaction Design", "Wireframing", "Figma", "Web Design", "User Research", "User Testing", "Adobe CC"],
   },
   experience: [
@@ -12,14 +12,14 @@ export const portfolioData = {
       role: "Operations Intern",
       company: "SAP Labs Korea",
       period: "Sep 2025 - Present",
-      description: "Optimize internal SharePoint architecture to improve accessibility and operational efficiency. Streamline cross-team collaboration by analyzing workflows and resolving communication bottlenecks. Design data-driven reporting materials to enhance decision-making and support employee experience initiatives.",
+      description: "Optimized SharePoint information architecture to improve accessibility and operational efficiency. Analyzed internal workflows, resolved communication gaps, and produced data-driven reports to support decision-making and employee experience initiatives.",
     },
     {
       id: 2,
       role: "UX Design Intern",
       company: "Volt Micro Co., Ltd.",
       period: "Sep 2023 - Dec 2023",
-      description: "Led the end-to-end redesign of CameraFi Studio (web & mobile), focusing on user funnel optimization. Increased feature engagement by 28% and session duration by 1.6x through A/B testing and behavioral data analysis. Contributed to design preparations for the service's exhibition at CES 2024. Collaborated with engineers to deliver production-ready solutions, resolving usability bottlenecks and enhancing retention.",
+      description: "Led the web and mobile redesign of CameraFi Studio, improving feature engagement by 28% and average session duration by 1.6x through A/B testing and behavior analysis. Prepared CES 2024 exhibition assets and partnered with engineers to deliver production-ready UX improvements.",
     },
   ],
   education: [
@@ -52,7 +52,7 @@ export const portfolioData = {
       title: "Solid Connection",
       category: "Web Application",
       image: "/Thumbnail/Solid%20Connection%20main.png",
-      summary: "Simulate your exchange application and connect with mentors through real-time data and verified stories.",
+      summary: "A data-driven exchange application platform for mock applications, school comparison, and verified alumni mentoring.",
       overview: {
         year: "2023 - Ongoing",
         duration: "Every 5 months for new features",
@@ -63,27 +63,27 @@ export const portfolioData = {
         logo: "/SC/solcon-logo-v2.png"
       },
       colors: ["#5950F6", "#4672EE", "#388CE8", "#2AA4E2"],
-      userProblem: "Prospective exchange students struggle with highly fragmented application information and a blind preparation process, relying on unverified rumors and scattered spreadsheets.",
-      businessGoal: "Streamline application management, boost verified alumni matching conversion rates, and reduce the onboarding drop-off rate (Bounce Rate) on informational pages to under 15%.",
-      designHypothesis: "If we divide the fragmented application form into a 9-step structured wizard, users will experience reduced cognitive load, which will decrease application bounce rates by 30% because step-by-step progressive disclosure lowers form completion friction.",
-      problem: "Prospective exchange students face extreme uncertainty due to highly fragmented information and a blind application process. On the product side, the lack of structured, predictive tools leads to low engagement, high drop-off during school selection, and low conversion from casual interest into finalized applications.",
+      userProblem: "Exchange applicants had to piece together school requirements, acceptance stories, and grade benchmarks from scattered sheets and rumors.",
+      businessGoal: "Make application prep easier to manage, increase verified mentor matching, and lower informational page bounce rates below 15%.",
+      designHypothesis: "A 9-step application wizard would make the process feel manageable and reduce form drop-off by showing only one decision at a time.",
+      problem: "Exchange applicants were making high-stakes choices with scattered information and little confidence. Without comparison tools or prediction cues, users dropped off during school selection and rarely moved from interest to application.",
       solution: [
-        "Centralized Data: Replaced scattered spreadsheets with a unified, searchable global school database.",
-        "Predictive Application: Developed a mock application system to visualize real-time competition rates and acceptance probabilities.",
-        "Verified Community: Built a 1:1 mentor-mentee matching system connecting applicants with verified alumni."
+        "School Database: Replaced scattered spreadsheets with one searchable global school list.",
+        "Mock Application: Showed real-time competition rates and acceptance signals before users applied.",
+        "Verified Mentoring: Connected applicants with alumni through 1:1 mentor matching."
       ],
-      background: "By transforming a blind, anxiety-inducing application process into a predictable, data-guided journey, we empower students to prepare with clarity and confidence.",
+      background: "We turned an uncertain exchange application process into a clearer path powered by data, reviews, and mentor support.",
       research: {
-        text: "We conducted in-depth interviews and surveys with 50+ prospective applicants and recent exchange students to identify exact drop-off points in the preparation funnel.",
+        text: "We interviewed and surveyed 50+ applicants and recent exchange students to find where preparation became confusing or stressful.",
         insights: [
-          { title: "Information Fragmentation", description: "Users spent over 40 hours manually searching for school requirements. Hypothesis: A centralized, filterable database will reduce search friction by 80%, driving higher user activation." },
-          { title: "Application Anxiety", description: "The inability to gauge acceptance probability was the primary bottleneck causing users to delay submissions. Hypothesis: Visualizing real-time specs and mock competition rates will build trust and accelerate application completions." }
+          { title: "Scattered School Data", description: "Users spent 40+ hours searching for requirements across sheets, blogs, and school pages. A filterable database could cut search time and help users start faster." },
+          { title: "Acceptance Anxiety", description: "Users delayed decisions because they could not judge their chances. Real-time applicant specs and mock competition rates could make the next step feel safer." }
         ]
       },
       userJourney: [
         {
           type: "Type A: Early Interest Stage",
-          description: "For users lost in a flood of information, the community acts as a 'navigation compass'.",
+          description: "For users lost in too much information, the community works as a simple starting guide.",
           stages: [
             { stage: "Awareness", doing: "Encounters vivid reviews on the in-app 'Real Stories' board instead of social media.", feeling: '"Where did people with similar concerns end up going?"', solution: "Trending Schools: Real-time popular countries and schools list." },
             { stage: "Exploration", doing: "Narrows down regions of interest through recommended posts and Q&As.", feeling: '"It felt overwhelming, but reading real reviews makes me feel like I can do it too."', solution: "Adaptive Onboarding: Customized community content curation based on user type." },
@@ -92,7 +92,7 @@ export const portfolioData = {
         },
         {
           type: "Type B: Preparing Stage",
-          description: "For users feeling anxious amidst competition, the community provides 'strategic data'.",
+          description: "For users anxious about competition, the community provides practical strategy data.",
           stages: [
             { stage: "Analysis", doing: "Enters grades into the 'Mock Application' system and checks the applicant distribution.", feeling: '"Where do my grades stand among the applicants for this school?"', solution: "Applicant Overview: Sharing real-time application status and competition rates." },
             { stage: "Comparison", doing: "Adjusts application strategy by checking the community's real-time ranking signals.", feeling: '"Looking at others\' specs, I should find a slightly safer option."', solution: "Peer Insights: Anonymous applicant specs and strategy sharing system." },
@@ -101,7 +101,7 @@ export const portfolioData = {
         },
         {
           type: "Type C: Needs Specific Info",
-          description: "For users needing concrete information, the community connects them with 'verified mentoring'.",
+          description: "For users who need specific answers, the community connects them with verified mentors.",
           stages: [
             { stage: "Deep Exploration", doing: "Searches for specific details like dormitories and living costs in the target school category.", feeling: '"I need actual structured info, much better than a Google Sheet."', solution: "Searchable Database: Structured real stories from students by school." },
             { stage: "Connection", doing: "Visits the 'Mentor' page of the school of interest to leave questions or subscribe to the channel.", feeling: '"I want to ask directly from a mentor who actually went to this school."', solution: "Mentor-Mentee UX: Dedicated channels and Q&As containing mentor know-how and tips." },
@@ -112,38 +112,38 @@ export const portfolioData = {
       userFlow: [
         {
           title: "1. Onboarding",
-          description: "Users enter their current GPA, language scores, and target region to initialize their personalized applicant profile.",
+          description: "Users enter GPA, language scores, and target region to create their applicant profile.",
           flow: ["Sign Up", "Input Specs", "Home Dashboard"]
         },
         {
           title: "2. Exploration",
-          description: "Search and compare global universities using the unified database, checking acceptance reviews and local facilities.",
+          description: "Users compare schools, requirements, reviews, and local details in one database.",
           flow: ["Search Univ.", "Filter Data", "Check Reviews"]
         },
         {
           title: "3. Mentoring",
-          description: "Reach out directly to verified alumni from target universities to ask specific lifestyle and interview questions via 1:1 Q&A.",
+          description: "Users ask verified alumni about school life, documents, and interviews through 1:1 Q&A.",
           flow: ["Mentor Profile", "1:1 Matching", "Ask Questions"]
         },
         {
           title: "4. Mock Apply",
-          description: "Select 1st and 2nd choice schools, input application tendency (safe/ambitious), and submit to the real-time queue.",
+          description: "Users select 1st and 2nd choice schools, set their strategy, and join the live mock queue.",
           flow: ["Select 1st/2nd", "Input Tendency", "Submit Mock"]
         },
         {
           title: "5. Strategize",
-          description: "Analyze competitor specs and real-time competition rates to finalize the actual exchange student application strategy.",
+          description: "Users compare applicant specs and competition rates before finalizing their real application strategy.",
           flow: ["View Dashboard", "Analyze Competitors", "Finalize"]
         }
       ],
       ideation: {
-        text: "Based on our research, we defined core opportunity areas focusing on data transparency, cognitive load reduction, and community trust. To execute this effectively, we established a targeted feature strategy tailored to specific user types.",
+        text: "Research pointed to three priorities: clearer data, less decision pressure, and stronger trust. We mapped each priority to a specific user type.",
         points: [
-          { title: "Opportunity: Data Transparency", description: "How might we consolidate global school data into an actionable, unified interface that reduces search time?" },
-          { title: "Opportunity: Relieving Anxiety", description: "How might we alleviate application anxiety through real-time data visualization and peer community?" },
-          { title: "Strategy: Adaptive Content Curation", description: "For early-stage users (Type A), we curated trending schools and beginner guides to act as a clear navigation compass against information overload." },
-          { title: "Strategy: Data-Driven Predictability", description: "To resolve the intense anxiety of preparing applicants (Type B), we designed a 'Mock Application' system that transparently visualizes real-time competition rates." },
-          { title: "Strategy: Trust-Based Verification UX", description: "For users needing concrete details (Type C), we structured a global database and a 1:1 verified mentoring system to ensure high-reliability connections." }
+          { title: "Opportunity: Data Transparency", description: "Bring school data into one interface so users can compare options quickly." },
+          { title: "Opportunity: Anxiety Relief", description: "Use real-time data and peer signals to help users judge their chances." },
+          { title: "Strategy: Guided Discovery", description: "For early-stage users, show trending schools and beginner guides first." },
+          { title: "Strategy: Mock Application", description: "For preparing users, show live competition rates and applicant specs." },
+          { title: "Strategy: Verified Mentoring", description: "For users with specific questions, connect them to verified alumni." }
         ]
       },
       design: {
@@ -151,25 +151,25 @@ export const portfolioData = {
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
         features: [
           { 
-            title: "Centralized Data", 
-            description: "Replaced scattered spreadsheets with a unified, searchable global school database."
+            title: "School Database",
+            description: "Replaced scattered spreadsheets with one searchable global school list."
           },
           { 
-            title: "Predictive Application", 
-            description: "Developed a mock application system to visualize real-time competition rates and acceptance probabilities."
+            title: "Mock Application",
+            description: "Showed live competition rates and acceptance signals before users applied."
           },
           { 
             title: "Verified Community", 
-            description: "Built a 1:1 mentor-mentee matching system connecting applicants with verified alumni."
+            description: "Connected applicants with verified alumni through 1:1 mentoring."
           }
         ]
       },
       testing: [],
       impact: {
         points: [
-          { title: "Quantitative Results", description: "Acquired 400+ new users and surpassed 77,000 total events, maintaining an average session duration of 2m 28s." },
-          { title: "Qualitative Feedback", description: "Verified the product's value with user feedback such as: 'Exchange student applications are finally predictable' and 'I no longer need to ask seniors one by one.'" },
-          { title: "Learnings & Next Steps", description: "Learned that visualizing real-time data directly impacts user trust and engagement. Next steps involve scaling the database to include European universities." }
+          { title: "Quantitative Results", description: "Acquired 400+ new users, passed 77,000 total events, and kept average session duration at 2m 28s." },
+          { title: "User Feedback", description: "Users said the service made exchange applications feel predictable and reduced the need to ask seniors one by one." },
+          { title: "Next Steps", description: "Real-time data increased trust and engagement. Next, the database can expand to more European universities." }
         ]
       }
     },
@@ -181,29 +181,29 @@ export const portfolioData = {
       image: "/Thumbnail/Camerafi%20Studio%20main.png",
       imagePosition: "object-[30%_70%]",
       colors: ["#B8E218", "#37C556", "#2362A2"],
-      summary: "An intuitive environment where creators can discover the features they need, exactly when they need them.",
+      summary: "A clearer creator workspace that helps streamers find the right broadcasting tools at the right moment.",
       overview: { year: "2023", duration: "4 Months", role: "UX/UI Design Intern (Design Contribution: 95%)" },
-      userProblem: "First-time creators face high cognitive load due to an overloaded first screen exposing all advanced live-broadcasting options at once, leading to drop-offs.",
-      businessGoal: "Optimize the first-session activation funnel, increase dashboard creation conversion, and improve homepage CTR by 25% while maintaining fast web asset load times under 1.5 seconds.",
-      designHypothesis: "If we hide advanced stream configurations behind contextual drawer UI (FAB) and provide a conversational live simulator, users will understand core features faster, increasing onboarding activation and CTR because interactive sandbox models increase confidence.",
-      problem: "During initial onboarding, CameraFi Studio suffered from high user drop-off. The home screen exposed all advanced live-broadcasting options at once, overwhelming new users. From a product perspective, this feature-heavy presentation created a steep learning curve, leading to poor first-session completion and low activation rates.",
+      userProblem: "New creators saw too many advanced broadcasting options on the first screen and dropped off before setup.",
+      businessGoal: "Improve first-session activation, increase dashboard creation, raise homepage CTR by 25%, and keep page load under 1.5 seconds.",
+      designHypothesis: "Hiding advanced settings behind contextual FAB actions and adding an interactive simulator would help users understand core features faster.",
+      problem: "CameraFi Studio had strong features, but the first screen showed too much too soon. New users faced a steep learning curve, which hurt setup completion and activation.",
       solution: [
-        "Value-Centric IA: Shifted from a feature-centric to a value-centric UI, prioritizing actions based on frequency of use and context.",
-        "Contextual UI (FAB): Introduced Floating Action Buttons to expose creation options only when needed, reducing decision fatigue.",
-        "Brand System Renewal: Consolidated logo, typography, color, and microcopy to build a consistent, welcoming brand identity."
+        "Value-First IA: Prioritized the actions creators use most often.",
+        "Contextual FAB: Revealed creation options only when users needed them.",
+        "Brand Renewal: Updated logo, typography, color, and microcopy for a clearer identity."
       ],
-      background: "We hypothesized that by dynamically revealing advanced features based on user action (Contextual Disclosure) rather than showing all options upfront, we could decrease cognitive load and increase conversion to streaming creation.",
+      background: "Instead of showing every feature upfront, we revealed advanced tools only when the user was ready to act.",
       research: {
-        text: "We asked users which part of the initial experience created the biggest entry barrier, then validated the findings through surveys with 45 external users and 14 internal employees, followed by A/B testing on the onboarding funnel. The survey confirmed that the main issue was not missing functionality, but an overloaded first screen that made the product hard to understand, hard to trust, and hard to enter.",
+        text: "We asked where the first experience felt difficult, then checked the findings with 45 external users, 14 employees, and onboarding A/B tests.",
         insights: [
-          { title: "Initial Screen Overload", description: "The survey confirmed that the entry barrier was visual and conceptual overload. Hypothesis: Reducing the initial active surface by hiding advanced parameters under a contextual menu will increase user activation." },
-          { title: "Clarity Before Features", description: "Users indicated that homepage clarity and brand identity were their top bottlenecks. Hypothesis: Replacing flat feature descriptions with a scrollable interactive simulator will increase feature comprehension by 30%." },
-          { title: "Survey-Driven Brand Renewal", description: "The visual results confirmed that the solution needed both structural and brand-level changes, including FAB-based reveal patterns and a cleaner identity system." }
+          { title: "Overloaded First Screen", description: "The issue was not missing features. Users needed fewer visible choices and a clearer path to start." },
+          { title: "Clarity Before Features", description: "Homepage clarity and brand identity were the biggest blockers. An interactive simulator could explain the product faster than long descriptions." },
+          { title: "Brand Renewal", description: "The redesign needed both a simpler structure and a cleaner visual identity." }
         ],
         chart: {
           title: "Survey: What Blocks First-Time Users?",
           question: "Which area should be clarified first to reduce onboarding friction?",
-          note: "The survey reframes the challenge itself: users are not asking for more features, but for a clearer first screen that makes navigation, identity, and entry points easier to understand.",
+          note: "Users were not asking for more features. They needed a clearer first screen, stronger identity, and easier entry points.",
           items: [
             { label: "Homepage UI/UX", value: 41.7 },
             { label: "Logo / Symbol", value: 33.3 },
@@ -213,10 +213,10 @@ export const portfolioData = {
         }
       },
       ideation: { 
-        text: "We focused on reducing initial friction by aligning the interface with the user's natural broadcasting context.", 
+        text: "We reduced first-use friction by matching the interface to the creator's broadcasting flow.",
         points: [
-          { title: "Opportunity: Contextual Reveal", description: "How might we expose only relevant features based on the user's immediate context, rather than overwhelming them upfront?" },
-          { title: "Opportunity: Interactive Onboarding", description: "How might we transform an information-heavy layout into an interactive tutorial using actual screen walkthroughs?" }
+          { title: "Opportunity: Contextual Reveal", description: "Show only the tools that match the user's current task." },
+          { title: "Opportunity: Interactive Onboarding", description: "Replace long feature explanations with screen-based walkthroughs." }
         ] 
       },
       design: {
@@ -230,7 +230,7 @@ export const portfolioData = {
       testing: [
         {
           title: "A/B Testing: Text-Heavy (A) vs. Interactive Simulator (B)",
-          description: "We compared the original layout (A) against the conversational simulator layout (B). Heatmap and user path analysis revealed that in Layout A, users suffered from visual paralysis and skipped reading feature specifications entirely, leading to a 34% drop-off. In Layout B, the interactive sandbox scoreboard encouraged immediate engagement, guiding 68% of users straight to the stream setup funnel and resulting in a 28% increase in overall CTR.",
+          description: "We compared the original layout with an interactive simulator. In the original, users skipped dense feature text and dropped off by 34%. In the simulator version, 68% moved directly to stream setup and overall CTR increased by 28%.",
           beforeImage: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800",
           afterImage: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=800"
         }
@@ -239,11 +239,11 @@ export const portfolioData = {
         points: [
           { 
             title: "IA & flow redesign\n(CTR ↑ 28%, session time ×1.6)", 
-            description: "Redesigned the previously complex information architecture with a user-centered structure, and simplified key feature flows using clear, flowchart-based mapping. As a result, users were able to navigate more efficiently — leading to a 28% increase in click-through rate and a 1.6× improvement in average session duration." 
+            description: "Simplified the IA and key feature flows with clear task mapping. Users navigated faster, raising CTR by 28% and average session duration by 1.6x."
           },
           { 
             title: "From UX Renewal to Global Recognition\n(CES 2024 Feedback)", 
-            description: "Through the renewal, the brand tone and intuitive main page received positive feedback even on a global stage. Visitors from various countries commented that “the features are complex but well organized,” and “the landing page clearly presents the core functions.” These insights served as strong validation for the overall design direction.\n\nCES 2024 was a valuable opportunity to understand how user-centered UX design can build brand trust and how design contributes directly to business value." 
+            description: "At CES 2024, visitors said the complex features felt well organized and the landing page made core functions easy to understand. The feedback confirmed that clearer UX can build trust and support business value."
           }
         ]
       }
@@ -255,25 +255,25 @@ export const portfolioData = {
       category: "Web & Mobile UI/UX",
       image: "/Thumbnail/Smart%20Fridge%20main.png",
       imagePosition: "object-[30%_70%]",
-      summary: "A personal Kitchen Resource Planning app that helps users manage fridge inventory, reduce food waste, and decide what to cook with ingredients they already have.",
+      summary: "A kitchen management app that tracks fridge inventory, reduces food waste, and suggests meals from ingredients users already have.",
       overview: {
         year: "2024",
         duration: "4 Months",
         role: "UX/UI Designer",
         team: "Ali Basim Khalaf Khalaf, Aria Abbaspour, SuKyeong Lee\nZeynep Geyik, Le Dai Duong Bui"
       },
-      problem: "Busy users often struggle to track their fridge inventory, leading to forgotten ingredients, duplicate purchases, expired food waste, and daily decision fatigue over what to cook.",
+      problem: "Busy users forget what is in the fridge, buy duplicates, miss expiration dates, and spend extra time deciding what to cook.",
       solution: [
-        "Kitchen Resource Planning (KRP): Framed the app as a personal ERP system for the kitchen to manage household food resources.",
-        "Inventory Visibility: A centralized dashboard to track ingredients, categories, and expiration dates at a glance.",
-        "Smart Recipe Recommendations: Suggests actionable meals based on currently available ingredients to reduce food waste."
+        "Kitchen Planning: Framed the app as a home system for managing food resources.",
+        "Inventory Visibility: Tracked ingredients, categories, quantities, and expiration dates in one view.",
+        "Recipe Suggestions: Recommended meals users could cook with ingredients already available."
       ],
-      background: "Smart Fridge started from a simple need: making everyday kitchen inventory visible, manageable, and actionable to reduce waste and stress.",
+      background: "Smart Fridge started from a simple need: help people see what they have, use it in time, and waste less food.",
       research: {
-        text: "We utilized semi-structured interviews and think-aloud testing to understand fridge management habits, pain points, and expected features.",
+        text: "We used interviews and think-aloud testing to understand how people manage food, shop, and choose meals.",
         insights: [
           { title: "Inventory Blindness", description: "Users frequently forgot what they owned before grocery shopping, directly causing duplicate purchases." },
-          { title: "Decision Fatigue", description: "Even with a full fridge, users struggled to decide what to cook, indicating a need for ingredient-based recipe suggestions." }
+          { title: "Meal Decision Fatigue", description: "Even with a full fridge, users struggled to choose meals. They needed recipe ideas based on available ingredients." }
         ]
       },
       userScenarioImages: [
@@ -287,46 +287,107 @@ export const portfolioData = {
         { src: "/SF/feature%203.png", alt: "Smart Fridge lo-fi feature screen 3" },
         { src: "/SF/feature%204.png", alt: "Smart Fridge lo-fi feature screen 4" }
       ],
+      userFlow: [
+        {
+          title: "1. Set Up Kitchen",
+          description: "Users set basic kitchen preferences before managing ingredients.",
+          flow: ["Open App", "Set Storage", "Choose Preferences"]
+        },
+        {
+          title: "2. Add Ingredients",
+          description: "Users register food items with the minimum information needed for tracking.",
+          flow: ["Tap Add", "Search Item", "Set Quantity", "Add Expiry Date", "Save Item"]
+        },
+        {
+          title: "3. Check Inventory",
+          description: "Users scan current fridge status and identify items that need attention.",
+          flow: ["Open Home", "Review Alerts", "Filter Category", "Select Ingredient"]
+        },
+        {
+          title: "4. Cook With What You Have",
+          description: "Users move from available ingredients to recipes they can cook now.",
+          flow: ["Open Recipes", "View Available Meals", "Check Missing Items", "Start Recipe"]
+        },
+        {
+          title: "5. Plan & Shop",
+          description: "Users connect event planning with a clear shopping action list.",
+          flow: ["Create Event", "Add Dishes", "Generate List", "Mark Purchased"]
+        }
+      ],
       ideation: { 
-        text: "We moved from initial concept definition to scenarios, storyboards, and lo-fi prototyping to validate the core interaction model.", 
+        text: "We moved from concept to scenarios, storyboards, and lo-fi prototypes to test the core flow.",
         points: [
-          { title: "HMW: Visibility", description: "How might we provide effortless visibility into the fridge's current state without tedious manual entry?" },
-          { title: "HMW: Actionability", description: "How might we connect expiring ingredients directly to meal planning and recipe suggestions?" }
+          { title: "HMW: Visibility", description: "How might we make the fridge's current state easy to see?" },
+          { title: "HMW: Actionability", description: "How might we connect expiring ingredients to meals users can cook now?" }
         ] 
       },
       design: {
-        text: "The final design organizes fridge inventory, recipe recommendations, add-item flows, and event planning into a simple mobile app experience. The interface focuses on helping users quickly understand what they have, what is expiring soon, and what they can cook now.",
-        image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=1200",
+        text: "The final design brings inventory, expiration alerts, recipe ideas, and event planning into one simple mobile flow.",
+        image: "/SF/mockup/Main.png",
         features: [
-          { title: "Home Screen", description: "Surfaces fridge status, key alerts, and entry points to recommendations so users can quickly understand the current state of their kitchen.", image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800" },
-          { title: "Inventory Screen", description: "Shows owned ingredients with clear categories, quantities, and expiration-related information for easier food management.", image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800" },
-          { title: "Recipe Screen", description: "Recommends meals based on available ingredients, emphasizing dishes users can make immediately.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" },
-          { title: "Event Planner", description: "Supports meal or event preparation by helping users connect planned dishes with required ingredients.", image: "https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&q=80&w=800" },
-          { title: "Add Item Flow", description: "Lets users register new ingredients through a simple and understandable input flow.", image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=800" }
+          { title: "Home Screen", description: "Shows fridge status, alerts, and recipe entry points at a glance.", image: "/SF/mockup/Main.png" },
+          { title: "Inventory Screen", description: "Lists ingredients by category, quantity, and freshness status.", image: "/SF/mockup/search.png" },
+          { title: "Recipe Screen", description: "Suggests meals users can cook right away with available ingredients.", image: "/SF/mockup/Quick%20meal.png" },
+          { title: "Event Planner", description: "Connects planned dishes with the ingredients users need to prepare.", image: "/SF/mockup/Event%20planner.png" },
+          { title: "Add Item Flow", description: "Makes new ingredient entry quick and easy to understand.", image: "/SF/mockup/stock%20plus.png" }
         ],
         styleGuide: {
-          text: "Created a warm, approachable UI with rounded cards, fresh food-inspired accent colors, and intuitive iconography.",
-          image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200"
+          text: "Created a warm UI with rounded cards, fresh accent colors, and easy-to-scan icons.",
+          image: "/SF/mockup/Onboarding.png"
         },
         hiFiGallery: [
-          { src: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800", alt: "Home overview mockup" },
-          { src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800", alt: "Pantry management mockup" },
-          { src: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=800", alt: "Recipe selection mockup" }
+          { src: "/SF/mockup/Main.png", alt: "Home overview mockup" },
+          { src: "/SF/mockup/search.png", alt: "Pantry management mockup" },
+          { src: "/SF/mockup/Quick%20meal.png", alt: "Recipe selection mockup" }
         ]
       },
       testing: [
         {
           title: "Think-Aloud Testing",
-          description: "Lo-fi prototypes were evaluated through think-aloud testing. Users responded positively to the overall usability, visual direction, and inventory management concept, while accessibility of some functions and the purpose of the event planner needed improvement.",
-          beforeImage: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800",
-          afterImage: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=800"
+          description: "We used think-aloud testing to find where users hesitated while managing ingredients, checking expiration status, and moving from inventory to meal decisions.",
+          focusAreas: [
+            {
+              title: "Add Item Flow",
+              action: "Register a new ingredient with quantity and expiration date.",
+              observation: "Can users complete the flow without asking what information is required?"
+            },
+            {
+              title: "Inventory Check",
+              action: "Find ingredients that are available or close to expiring.",
+              observation: "Can users quickly understand fridge status from categories, labels, and alerts?"
+            },
+            {
+              title: "Recipe Decision",
+              action: "Choose a meal based on ingredients already in the fridge.",
+              observation: "Do users trust the recommendation and understand missing ingredients?"
+            },
+            {
+              title: "Event Planner",
+              action: "Plan a meal event and turn required items into a shopping list.",
+              observation: "Do users understand why this feature exists and when to use it?"
+            }
+          ],
+          findings: [
+            "Users understood the inventory concept quickly when quantity and expiration status were visible together.",
+            "Recipe recommendations felt useful, but users wanted clearer separation between cook-now meals and meals with missing items.",
+            "The event planner needed stronger naming and entry context because users did not immediately connect it with grocery planning.",
+            "Primary actions such as Save Item and Generate Shopping List needed stronger visual emphasis."
+          ],
+          userQuotes: [
+            "\"I can see what is expiring soon, but I want to know what I should cook first.\"",
+            "\"This recipe looks useful, but I am not sure if I already have every ingredient.\"",
+            "\"Event Planner sounds helpful, but I do not immediately know when I would use it.\"",
+            "\"After adding an item, I want a clearer sign that it has been saved.\""
+          ],
+          beforeImage: "/SF/main.png",
+          afterImage: "/SF/mockup/Main.png"
         }
       ],
       impact: {
         points: [
-          { title: "Improved Management", description: "Successfully systematized fridge contents, making quantities and expiration status instantly understandable." },
-          { title: "Reduced Decision Burden", description: "Connected available ingredients with automated recipe recommendations, significantly reducing meal prep time." },
-          { title: "Learnings & Next Steps", description: "Think-aloud testing revealed that terminology (e.g., 'Event Planner') must match user mental models. Future iterations would integrate barcode scanning." }
+          { title: "Improved Management", description: "Made quantities and expiration status easier to understand at a glance." },
+          { title: "Reduced Meal Decisions", description: "Connected available ingredients to recipe ideas, reducing meal planning time." },
+          { title: "Next Steps", description: "Testing showed that terms like 'Event Planner' must match user expectations. A future version could add barcode scanning." }
         ]
       }
     },
@@ -339,45 +400,45 @@ export const portfolioData = {
       image: "/Thumbnail/Solo%20wedding%20main.png",
       imagePosition: "object-center",
       colors: ["#A93E32", "#D36155", "#E89D95", "#F7D6D2"],
-      summary: "A self-celebration ritual platform that helps users mark personal milestones through personalized color themes, guided declarations, and a private self-narrative archive.",
+      summary: "A self-celebration platform for marking personal milestones with color themes, guided declarations, and a private archive.",
       overview: {
         year: "2024",
         duration: "8 Weeks",
         role: "Lead Product Designer (Brand Identity & UX/UI Design)"
       },
-      problem: "Traditional celebration culture heavily focuses on social milestones (e.g., marriage), leaving personal growth, recovery, and self-overcoming without an official platform for recognition. Individuals often feel emotionally underserved by a culture that rarely legitimizes solo rituals.",
+      problem: "Celebration culture often centers on social milestones like marriage. Personal growth, recovery, and self-overcoming rarely get the same kind of ritual or recognition.",
       solution: [
-        "Emotional Diagnostic System: Visualizes the user's emotional state through a personalized color zone that becomes the theme of their experience.",
-        "Ritual Experience Design: Uses guided ceremony flows and multi-modal inputs to turn a personal promise into a formal declaration.",
-        "Self-Narrative Archive: Preserves emotional themes and declarations so users can revisit their personal growth over time."
+        "Emotional Color Theme: Turns the user's emotional state into a personal visual theme.",
+        "Guided Declaration: Helps users turn a personal promise into a formal moment.",
+        "Private Archive: Saves themes and declarations so users can revisit their growth."
       ],
       background: "What happens when the object of celebration is the self? Fiora transforms wedding traditions into a warm ritual for self-acceptance.",
       research: {
-        text: "Grounded in demographic shifts and social trend analysis, we examined the rapid rise of single-person households and the concurrent decline in traditional marriages to validate the necessity of alternative self-celebration rituals.",
+        text: "We studied social trends around single-person households, non-marriage, and declining weddings to understand the need for new self-celebration rituals.",
         insights: [
-          { title: "Demographic Shift", description: "The proportion of single-person households in Korea surged from 29.3% in 2018 to 35.5% in 2023, reflecting a fast-growing demographic prioritizing individual lifestyles." },
-          { title: "Marriage Decline", description: "Annual marriages plummeted from over 305k in 2014 to under 194k in 2023, showing that traditional social milestones are losing their structural dominance." },
+          { title: "Demographic Shift", description: "Single-person households in Korea rose from 29.3% in 2018 to 35.5% in 2023, showing a fast shift toward individual lifestyles." },
+          { title: "Marriage Decline", description: "Annual marriages fell from over 305k in 2014 to under 194k in 2023, making traditional milestones less universal." },
           { title: "The Social Hurdle", description: "Users needed a safe, private way to celebrate themselves without feeling exposed or judged by conventional norms." },
           { title: "Psychological Value", description: "Research showed that formalized rituals significantly reduce anxiety and strengthen self-efficacy." }
         ]
       },
       ideation: {
-        text: "The experience was structured as a three-step architecture: Exploration (self-discovery), Transformation (visual theme), and Manifestation (ceremony).",
+        text: "The experience has three steps: explore the self, choose a visual theme, and complete a personal ceremony.",
         points: [
-          { title: "HMW: Validation", description: "How might we design an interface that makes solo celebration feel intentional, premium, and meaningful?" },
-          { title: "HMW: Expression", description: "How might we provide multi-modal inputs (voice, text) to accommodate different comfort levels during the declaration?" }
+          { title: "HMW: Validation", description: "How might we make solo celebration feel intentional and meaningful?" },
+          { title: "HMW: Expression", description: "How might we let users declare their promise through voice, text, or image?" }
         ]
       },
       design: {
-        text: "The UI balances emotional storytelling with practical interaction. Personalized color themes, multi-modal input support, and spacious typography create an interface that feels ceremonial rather than transactional.",
+        text: "The UI combines emotional storytelling with simple interactions. Color themes, flexible inputs, and spacious type make the experience feel ceremonial.",
         image: "/Thumbnail/Solo%20wedding%20main.png",
         features: [
-          { title: "Personalized Color Theme", description: "The selected emotional color is applied across the interface so the experience feels personal and coherent.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" },
-          { title: "Multi-Modal Input Support", description: "Users can record their declaration through voice, text, or selfie-based interaction depending on comfort level.", image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800" },
-          { title: "Emotional Visual Identity", description: "Large typography, intentional white space, and warm visual pacing reinforce the feeling of self-celebration.", image: "https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&q=80&w=800" }
+          { title: "Personalized Color Theme", description: "Applies the user's emotional color across the experience.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" },
+          { title: "Flexible Input Support", description: "Lets users create a declaration through voice, text, or selfie interaction.", image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800" },
+          { title: "Emotional Visual Identity", description: "Uses large type, white space, and warm pacing to support self-celebration.", image: "https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&q=80&w=800" }
         ],
         styleGuide: {
-          text: "The design language relies on soft gradients, elegant serif typography, and generous white space to emulate a premium ritual experience.",
+          text: "Soft gradients, elegant serif type, and generous white space create a premium ritual mood.",
           image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200"
         },
         hiFiGallery: [
@@ -389,16 +450,16 @@ export const portfolioData = {
       testing: [
         {
           title: "Testing & Iterations",
-          description: "The onboarding flow was refined to feel less artificial by introducing question-based color suggestions and delayed choice reveal. Declaration writing support was also strengthened with AI-assisted sentence guidance based on selected keywords.",
+          description: "The onboarding became more natural with question-based color suggestions and a delayed reveal. Declaration writing also gained AI sentence guidance based on selected keywords.",
           beforeImage: "/Thumbnail/Solo%20wedding%20main.png",
           afterImage: "/Thumbnail/Solo%20wedding%20main.png"
         }
       ],
       impact: {
         points: [
-          { title: "Emotional Clarity", description: "Successfully framed solo celebration as a legitimate ritual for personal milestones, not just a substitute for conventional weddings." },
+          { title: "Emotional Clarity", description: "Framed solo celebration as its own ritual for personal milestones, not a substitute for weddings." },
           { title: "Private Archive", description: "Created a secure digital space where users can revisit their declarations and memories tied to specific growth phases." },
-          { title: "Learnings & Next Steps", description: "Learned that spacious typography and intentional white space are critical for setting a 'ceremonial' pacing in UX. Next steps involve opt-in social sharing." }
+          { title: "Next Steps", description: "Spacious type and white space were key to the ceremonial mood. Next, the service could test opt-in social sharing." }
         ]
       }
     }
@@ -428,15 +489,15 @@ export const portfolioData = {
         { src: "/Camerafi%20Branding/%E1%84%83%E1%85%A2%E1%84%8C%E1%85%B5%201_11@300x-100.png", alt: "CameraFi Studio CI guideline 12" },
         { src: "/Camerafi%20Branding/%E1%84%83%E1%85%A2%E1%84%8C%E1%85%B5%201_13@300x-100.png", alt: "CameraFi Studio CI guideline 13" }
       ],
-      summary: "An intuitive environment where creators can discover the features they need, exactly when they need them.",
+      summary: "A clearer creator workspace that helps streamers find the right tools at the right moment.",
       overview: { year: "2023", duration: "4 Months", role: "UX/UI Design Intern (Design Contribution: 95%)" },
-      problem: "Despite having powerful features, too many features were exposed on the initial screen, creating a high barrier to entry for new users. This caused high cognitive load and user drop-off.",
+      problem: "The product had powerful features, but the first screen showed too much at once. New users struggled to understand where to start.",
       solution: [
-        "IA Innovation: Shifted from a feature-centric to a value-centric UI, redesigning the information architecture based on frequency of use and context.",
-        "FAB-based UI Structure: Introduced contextual Floating Action Buttons (FAB) to expose only the creation options needed at the moment, reducing decision fatigue.",
+        "Value-First IA: Reorganized the UI around frequent creator actions.",
+        "FAB Structure: Used Floating Action Buttons to show creation options only when needed.",
         "Brand System Renewal: Consolidated logo, typography, color, and microcopy to build a consistent brand identity."
       ],
-      background: "The core of the design was not to simply list complex features, but to create an intuitive environment where creators can discover the features they need, exactly when they need them.",
+      background: "The design goal was simple: help creators find the right feature at the moment they need it.",
       research: {
         text: "We conducted a survey with 45 users and approximately 14 internal employees. The results revealed that more than half felt uncomfortable with the existing brand identity and UI/UX.",
         insights: [
@@ -444,10 +505,10 @@ export const portfolioData = {
         ]
       },
       ideation: { 
-        text: "We explored solutions that align with user context to reduce initial friction.", 
+        text: "We explored ways to make the first experience clearer and easier to enter.",
         points: [
-          { title: "Contextual Reveal", description: "Adopted an approach that exposes only relevant features based on the user's context, rather than showing all features at once." },
-          { title: "Tutorial-style Landing Page", description: "Applied the idea of transforming an information-heavy layout into an interactive tutorial with actual screen walkthroughs." }
+          { title: "Contextual Reveal", description: "Show only the features that match the user's current task." },
+          { title: "Tutorial-style Landing Page", description: "Turn dense feature text into screen-based walkthroughs." }
         ] 
       },
       design: {
@@ -474,15 +535,15 @@ export const portfolioData = {
       image: "/camerafi-main.png",
       imagePosition: "object-[30%_70%]",
       thumbnail: "/Thumbnail/Solid%20connection%20logo.png",
-      summary: "An intuitive environment where creators can discover the features they need, exactly when they need them.",
+      summary: "A clearer creator workspace that helps streamers find the right tools at the right moment.",
       overview: { year: "2023", duration: "4 Months", role: "UX/UI Design Intern (Design Contribution: 95%)" },
-      problem: "Despite having powerful features, too many features were exposed on the initial screen, creating a high barrier to entry for new users. This caused high cognitive load and user drop-off.",
+      problem: "The product had powerful features, but the first screen showed too much at once. New users struggled to understand where to start.",
       solution: [
-        "IA Innovation: Shifted from a feature-centric to a value-centric UI, redesigning the information architecture based on frequency of use and context.",
-        "FAB-based UI Structure: Introduced contextual Floating Action Buttons (FAB) to expose only the creation options needed at the moment, reducing decision fatigue.",
+        "Value-First IA: Reorganized the UI around frequent creator actions.",
+        "FAB Structure: Used Floating Action Buttons to show creation options only when needed.",
         "Brand System Renewal: Consolidated logo, typography, color, and microcopy to build a consistent brand identity."
       ],
-      background: "The core of the design was not to simply list complex features, but to create an intuitive environment where creators can discover the features they need, exactly when they need them.",
+      background: "The design goal was simple: help creators find the right feature at the moment they need it.",
       research: {
         text: "We conducted a survey with 45 users and approximately 14 internal employees. The results revealed that more than half felt uncomfortable with the existing brand identity and UI/UX.",
         insights: [
@@ -490,10 +551,10 @@ export const portfolioData = {
         ]
       },
       ideation: { 
-        text: "We explored solutions that align with user context to reduce initial friction.", 
+        text: "We explored ways to make the first experience clearer and easier to enter.",
         points: [
-          { title: "Contextual Reveal", description: "Adopted an approach that exposes only relevant features based on the user's context, rather than showing all features at once." },
-          { title: "Tutorial-style Landing Page", description: "Applied the idea of transforming an information-heavy layout into an interactive tutorial with actual screen walkthroughs." }
+          { title: "Contextual Reveal", description: "Show only the features that match the user's current task." },
+          { title: "Tutorial-style Landing Page", description: "Turn dense feature text into screen-based walkthroughs." }
         ] 
       },
       design: {
@@ -520,15 +581,15 @@ export const portfolioData = {
       image: "/camerafi-main.png",
       imagePosition: "object-[30%_70%]",
       thumbnail: "/Thumbnail/logo.png",
-      summary: "An intuitive environment where creators can discover the features they need, exactly when they need them.",
+      summary: "A clearer creator workspace that helps streamers find the right tools at the right moment.",
       overview: { year: "2023", duration: "4 Months", role: "UX/UI Design Intern (Design Contribution: 95%)" },
-      problem: "Despite having powerful features, too many features were exposed on the initial screen, creating a high barrier to entry for new users. This caused high cognitive load and user drop-off.",
+      problem: "The product had powerful features, but the first screen showed too much at once. New users struggled to understand where to start.",
       solution: [
-        "IA Innovation: Shifted from a feature-centric to a value-centric UI, redesigning the information architecture based on frequency of use and context.",
-        "FAB-based UI Structure: Introduced contextual Floating Action Buttons (FAB) to expose only the creation options needed at the moment, reducing decision fatigue.",
+        "Value-First IA: Reorganized the UI around frequent creator actions.",
+        "FAB Structure: Used Floating Action Buttons to show creation options only when needed.",
         "Brand System Renewal: Consolidated logo, typography, color, and microcopy to build a consistent brand identity."
       ],
-      background: "The core of the design was not to simply list complex features, but to create an intuitive environment where creators can discover the features they need, exactly when they need them.",
+      background: "The design goal was simple: help creators find the right feature at the moment they need it.",
       research: {
         text: "We conducted a survey with 45 users and approximately 14 internal employees. The results revealed that more than half felt uncomfortable with the existing brand identity and UI/UX.",
         insights: [
@@ -536,10 +597,10 @@ export const portfolioData = {
         ]
       },
       ideation: { 
-        text: "We explored solutions that align with user context to reduce initial friction.", 
+        text: "We explored ways to make the first experience clearer and easier to enter.",
         points: [
-          { title: "Contextual Reveal", description: "Adopted an approach that exposes only relevant features based on the user's context, rather than showing all features at once." },
-          { title: "Tutorial-style Landing Page", description: "Applied the idea of transforming an information-heavy layout into an interactive tutorial with actual screen walkthroughs." }
+          { title: "Contextual Reveal", description: "Show only the features that match the user's current task." },
+          { title: "Tutorial-style Landing Page", description: "Turn dense feature text into screen-based walkthroughs." }
         ] 
       },
       design: {
@@ -626,17 +687,17 @@ export const portfolioData = {
         { src: "/Smart%20Curtain%20project/56.png", alt: "Smart Curtain presentation slide 56" },
         { src: "/Smart%20Curtain%20project/Wictoria.png", alt: "Smart Curtain presentation contributor Wictoria" }
       ],
-      summary: "A curtain-based adaptive workspace system that connects physical spatial control with a digital interface for privacy, comfort, and focus.",
+      summary: "A smart curtain system that lets workers adjust privacy, comfort, and focus through physical space control and a mobile app.",
       overview: { year: "2024", duration: "4 Months", role: "Product Designer (UX/UI, Research, Concept, Prototype)" },
-      problem: "Open office and hybrid work environments often lack control over privacy, noise, and environmental comfort. Users struggle with limited visual and acoustic separation, inconsistent light and temperature, and no integrated system to manage workspace conditions seamlessly, leading to reduced productivity and dissatisfaction.",
+      problem: "Open offices and hybrid workplaces often give users little control over privacy, noise, light, and temperature. This makes focus and comfort harder to maintain.",
       solution: [
-        "Spatial Control: A curtain-based modular partition system that can divide or connect workspace zones as needed.",
-        "Environmental Control: Temperature, lighting, and acoustic adjustments that support focus, privacy, and comfort.",
-        "App Integration: A mobile interface for real-time workspace control, reframing the curtain as an interface for dynamically managing physical space."
+        "Spatial Control: A modular curtain system that divides or connects work zones.",
+        "Environmental Control: Light, temperature, and acoustic settings that support focus and comfort.",
+        "App Control: A mobile interface for adjusting the workspace in real time."
       ],
-      background: "As hybrid work environments expanded, users needed flexible ways to control their surroundings. This project explores how a physical object, curtains, can evolve into an interactive system that improves focus, privacy, and wellbeing.",
+      background: "As hybrid work grew, people needed more flexible control over their surroundings. This project turns curtains into an interactive system for focus, privacy, and wellbeing.",
       research: {
-        text: "Research combined persona and empathy mapping, workspace behavior analysis, survey inputs, and trend research to reframe the project from a curtain product concept into an environmental UX solution.",
+        text: "Research combined personas, empathy maps, workspace behavior, survey inputs, and trend research to move from a curtain product to a workspace UX system.",
         insights: [
           { title: "Privacy & Focus Issues", description: "Users struggled to concentrate in open environments and needed adjustable personal boundaries for visual and acoustic separation." },
           { title: "Environmental Discomfort", description: "Light, temperature, and noise conditions were inconsistent, while users lacked a unified way to control them." },
@@ -644,26 +705,26 @@ export const portfolioData = {
         ]
       },
       ideation: { 
-        text: "The concept was developed around a smart curtain system that treats space itself as an interface, combining modular physical separation with a digital control layer.", 
+        text: "The concept treats space as an interface by combining modular curtains with app-based control.",
         points: [
-          { title: "Space as Interface", description: "Expanded the curtain from a passive physical element into an active UX interface for controlling privacy, focus, and ambiance." },
-          { title: "Modular System", description: "Designed the system to flexibly separate or integrate spaces depending on changing work activities." },
-          { title: "Smart Control Layer", description: "Connected the physical curtain system to app-based controls for temperature, lighting, and environmental feedback." }
+          { title: "Space as Interface", description: "Turned the curtain into an active tool for privacy, focus, and ambiance." },
+          { title: "Modular System", description: "Designed flexible separation for focus, collaboration, and rest." },
+          { title: "Smart Control Layer", description: "Linked the curtain to app controls for temperature, lighting, and environmental feedback." }
         ] 
       },
       design: {
-        text: "The design connects physical interaction, digital control, and material experience. The curtain functions as a room divider, acoustic buffer, and light filter, while the app provides temperature control, space configuration, and real-time environmental feedback.",
+        text: "The design connects physical movement, digital control, and material comfort. The curtain divides space, softens sound, filters light, and responds through the app.",
         image: "/smart-curtain-main.png",
         features: [
-          { title: "Physical Interaction Design", description: "Defined the curtain as a room divider, acoustic buffer, and light filter that gives users direct spatial feedback." },
-          { title: "Digital Interface", description: "Designed an app experience for temperature control, space configuration, and real-time environment feedback across physical and digital touchpoints." },
-          { title: "Material & Experience Design", description: "Connected wool and linen material choices to user experience qualities such as acoustic comfort, insulation, breathability, and thermal comfort." }
+          { title: "Physical Interaction", description: "Used the curtain as a divider, acoustic buffer, and light filter." },
+          { title: "Digital Interface", description: "Designed app controls for temperature, layout, and environmental feedback." },
+          { title: "Material Experience", description: "Linked wool and linen choices to sound comfort, insulation, breathability, and warmth." }
         ]
       },
       testing: [
         {
           title: "Prototype Testing",
-          description: "Validated the physical curtain prototype, 3D structural model, and app interactions. Users preferred simple, intuitive controls; over-automation reduced perceived control; and the physical movement of the curtain was critical to the experience.",
+          description: "Prototype tests covered the curtain model, 3D structure, and app flow. Users preferred simple controls, disliked too much automation, and valued the physical curtain movement.",
           beforeImage: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800",
           afterImage: "/smart-curtain-main.png"
         }

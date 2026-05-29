@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 interface ScreenData {
@@ -9,78 +9,93 @@ interface ScreenData {
   subtitle: string;
   description: string;
   src: string;
+  backgroundClass: string;
 }
 
 const screens: ScreenData[] = [
   {
     id: 1,
-    title: "Home Dashboard",
-    subtitle: "홈 대시보드",
-    description: "Surfaces fridge status, quick tracking alerts, and recipe recommendations.",
-    src: "/SF/main.png",
+    title: "Onboarding",
+    subtitle: "온보딩",
+    description: "Introduces the app with a simple first-use flow.",
+    src: "/SF/mockup/Onboarding.png",
+    backgroundClass: "bg-[#14CC60]",
   },
   {
     id: 2,
-    title: "Inventory Management",
-    subtitle: "인벤토리 관리",
-    description: "Centralized pantry organizer showing category, quantity, and freshness status.",
-    src: "/SF/feature 1.png",
+    title: "Home Dashboard",
+    subtitle: "홈 대시보드",
+    description: "Shows fridge status, alerts, and recipe ideas.",
+    src: "/SF/mockup/Main.png",
+    backgroundClass: "bg-neutral-950",
   },
   {
     id: 3,
-    title: "Expiration Alerts",
-    subtitle: "유통기한 알림",
-    description: "Prioritizes ingredients near expiry with clear color-coded countdown indicators.",
-    src: "/SF/feature 1.png",
+    title: "Inventory Management",
+    subtitle: "인벤토리 관리",
+    description: "Organizes ingredients by category, quantity, and freshness.",
+    src: "/SF/mockup/search.png",
+    backgroundClass: "bg-neutral-950",
   },
   {
     id: 4,
-    title: "Recipe Feed",
-    subtitle: "레시피 피드",
-    description: "Recommends personalized recipes based on ingredients currently in the fridge.",
-    src: "/SF/feature 2.png",
+    title: "Expiration Alerts",
+    subtitle: "유통기한 알림",
+    description: "Highlights ingredients that are close to expiring.",
+    src: "/SF/mockup/stock%20plus.png",
+    backgroundClass: "bg-neutral-950",
   },
   {
     id: 5,
-    title: "Recipe Step-by-Step",
-    subtitle: "레시피 상세 정보",
-    description: "Detailed cooking guides with dynamic ingredient checklist and step instructions.",
-    src: "/SF/feature 2.png",
+    title: "Recipe Feed",
+    subtitle: "레시피 피드",
+    description: "Suggests recipes from ingredients already in the fridge.",
+    src: "/SF/mockup/Quick%20meal.png",
+    backgroundClass: "bg-neutral-950",
   },
   {
     id: 6,
-    title: "Event Planner",
-    subtitle: "이벤트 플래너",
-    description: "Integrates meal planning with family events, linking required items to grocery lists.",
-    src: "/SF/feature 3.png",
+    title: "Recipe Step-by-Step",
+    subtitle: "레시피 상세 정보",
+    description: "Shows cooking steps with an ingredient checklist.",
+    src: "/SF/mockup/Quick%20meal-2.png",
+    backgroundClass: "bg-neutral-950",
   },
   {
     id: 7,
-    title: "Grocery Shopping List",
-    subtitle: "쇼핑 목록",
-    description: "Consolidates missing ingredients from the event planner for easy shopping.",
-    src: "/SF/feature 3.png",
+    title: "Event Planner",
+    subtitle: "이벤트 플래너",
+    description: "Links planned meals with the ingredients users need.",
+    src: "/SF/mockup/Event%20planner.png",
+    backgroundClass: "bg-neutral-950",
   },
   {
     id: 8,
-    title: "Add Item Flow",
-    subtitle: "식재료 등록 흐름",
-    description: "A simplified interface to register new items quickly via search or barcodes.",
-    src: "/SF/feature 4.png",
+    title: "Grocery Shopping List",
+    subtitle: "쇼핑 목록",
+    description: "Collects missing ingredients into one shopping list.",
+    src: "/SF/mockup/Event%20planner-2.png",
+    backgroundClass: "bg-neutral-950",
   }
 ];
 
 export default function SmartFridgeSolutions() {
   const [activePhotoIdx, setActivePhotoIdx] = useState<number | null>(null);
 
+  useEffect(() => {
+    document.body.style.overflow = activePhotoIdx !== null ? "hidden" : "unset";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [activePhotoIdx]);
+
   const openLightbox = (idx: number) => {
     setActivePhotoIdx(idx);
-    document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     setActivePhotoIdx(null);
-    document.body.style.overflow = "unset";
   };
 
   const showPrev = (e: React.MouseEvent) => {
@@ -108,7 +123,7 @@ export default function SmartFridgeSolutions() {
             Smart Fridge Interfaces
           </h3>
           <p className="text-base md:text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed">
-            The final design features a clean, user-centric mobile UI focused on kitchen resource planning. Arrange ingredients, track expiration timelines, and get instant cooking inspirations.
+            A clean mobile UI for checking ingredients, tracking expiration dates, and finding meals to cook now.
           </p>
         </div>
 
@@ -133,15 +148,17 @@ export default function SmartFridgeSolutions() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/10 opacity-60 pointer-events-none z-10"></div>
                 
                 {/* Screen Image */}
-                <div className="relative w-full h-full bg-neutral-900 overflow-hidden">
-                  <Image
-                    src={screen.src}
-                    alt={screen.title}
-                    fill
-                    sizes="(max-width: 640px) 240px, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    priority={idx < 4}
-                  />
+                <div className={`relative w-full h-full overflow-hidden ${screen.backgroundClass}`}>
+                  <div className="absolute bottom-0 left-0 w-full h-[calc(100%-1.5rem)]">
+                    <Image
+                      src={screen.src}
+                      alt={screen.title}
+                      fill
+                      sizes="(max-width: 640px) 240px, (max-width: 1024px) 50vw, 25vw"
+                      className="object-contain object-top"
+                      priority={idx < 4}
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -196,7 +213,7 @@ export default function SmartFridgeSolutions() {
 
             {/* Mockup Display inside Lightbox */}
             <div 
-              className="relative aspect-[9/19.5] h-full rounded-[2.5rem] border-[8px] border-neutral-900 bg-neutral-950 shadow-2xl overflow-hidden"
+              className={`relative aspect-[9/19.5] h-full rounded-[2.5rem] border-[8px] border-neutral-900 shadow-2xl overflow-hidden ${screens[activePhotoIdx].backgroundClass}`}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Dynamic Island Notch */}
@@ -204,14 +221,16 @@ export default function SmartFridgeSolutions() {
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-950/40 absolute left-3"></span>
               </div>
               
-              <Image
-                src={screens[activePhotoIdx].src}
-                alt={screens[activePhotoIdx].title}
-                fill
-                sizes="80vh"
-                className="object-cover object-top"
-                priority
-              />
+              <div className="absolute bottom-0 left-0 w-full h-[calc(100%-1.5rem)]">
+                <Image
+                  src={screens[activePhotoIdx].src}
+                  alt={screens[activePhotoIdx].title}
+                  fill
+                  sizes="80vh"
+                  className="object-contain object-top"
+                  priority
+                />
+              </div>
             </div>
 
             {/* Right navigation arrow */}

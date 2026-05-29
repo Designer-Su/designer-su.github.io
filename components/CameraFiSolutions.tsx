@@ -5,6 +5,7 @@ import React, { useState } from "react";
 export default function CameraFiSolutions() {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const palette = ["#B8E218", "#37C556", "#2362A2"];
 
   return (
     <div className="w-full bg-white text-neutral-900 flex flex-col gap-32 mb-32 overflow-hidden pt-24">
@@ -12,14 +13,14 @@ export default function CameraFiSolutions() {
       <section className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 md:px-16 py-20 bg-neutral-50 rounded-[3rem] mx-4 md:mx-6 md:w-[calc(100%-3rem)]">
         <div className="max-w-4xl text-center mb-12 md:mb-16 z-10">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-black text-black bg-[#B8E218]">01</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-black text-black" style={{ backgroundColor: palette[0] }}>01</span>
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-neutral-400">Solution</span>
           </div>
           <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
             Conversational Landing Page
           </h3>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            A dynamic, scrollable landing page displayed inside a front-facing MacBook monitor, using interactive guided walkthroughs instead of complex feature descriptions.
+            A scrollable landing page that explains features through guided screens instead of dense text.
           </p>
         </div>
 
@@ -30,7 +31,7 @@ export default function CameraFiSolutions() {
             {/* Camera dot & sensor */}
             <div className="absolute top-1.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-neutral-800 border border-neutral-700/50"></span>
-              <span className="w-1 h-1 rounded-full bg-blue-900/50"></span>
+              <span className="w-1 h-1 rounded-full" style={{ backgroundColor: palette[2], opacity: 0.45 }}></span>
             </div>
 
             {/* Screen Viewport */}
@@ -113,7 +114,7 @@ export default function CameraFiSolutions() {
                     <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-5 flex flex-col gap-4 shadow-xl">
                       <div className="flex justify-between items-center pb-2 border-b border-neutral-850">
                         <span className="text-[10px] font-black text-neutral-400 uppercase tracking-wider">Feature: Sports Scoreboard</span>
-                        <span className="text-[8px] bg-green-500/10 text-[#37C556] border border-green-500/20 px-2 py-0.5 rounded-full">30+ Sports Supported</span>
+                        <span className="text-[8px] px-2 py-0.5 rounded-full border" style={{ backgroundColor: `${palette[1]}14`, color: palette[1], borderColor: `${palette[1]}33` }}>30+ Sports Supported</span>
                       </div>
                       
                       {/* Interactive Scoreboard Simulation */}
@@ -137,7 +138,7 @@ export default function CameraFiSolutions() {
                         {/* Status bar */}
                         <div className="flex justify-between w-full max-w-xs text-[8px] text-slate-400 px-1 font-mono">
                           <span>⏱️ TIME: 78:42</span>
-                          <span className="text-[#37C556] animate-pulse">● LIVE STREAMING</span>
+                          <span className="animate-pulse" style={{ color: palette[1] }}>● LIVE STREAMING</span>
                           <span>🏆 PREMIER LEAGUE</span>
                         </div>
                       </div>
@@ -157,10 +158,10 @@ export default function CameraFiSolutions() {
                         
                         {/* URL Box Mockup */}
                         <div className="bg-neutral-950 border border-neutral-850 rounded-lg p-2.5 flex items-center justify-between gap-3">
-                          <span className="text-[9px] text-[#37C556] font-mono truncate flex-1">
+                          <span className="text-[9px] font-mono truncate flex-1" style={{ color: palette[1] }}>
                             https://studio.camerafi.com/widget/scoreboard-liv-che-3849x
                           </span>
-                          <button className="bg-[#37C556] hover:bg-green-600 text-white font-bold text-[8px] px-2.5 py-1.5 rounded shadow shrink-0 active:scale-95 transition-all">
+                          <button className="text-white font-bold text-[8px] px-2.5 py-1.5 rounded shadow shrink-0 active:scale-95 transition-all" style={{ backgroundColor: palette[1] }}>
                             Copy Link
                           </button>
                         </div>
@@ -189,7 +190,7 @@ export default function CameraFiSolutions() {
                           
                           {/* Captions Overlay */}
                           <div className="bg-black/80 border border-white/10 p-1.5 rounded text-[8px] leading-normal font-sans z-10">
-                            <span className="text-green-400 font-bold">🎙️ AI Captions:</span> "And it's a magnificent shot into the top corner! Liverpool leads 2-1."
+                            <span className="text-green-400 font-bold">🎙️ AI Captions:</span> &quot;And it&apos;s a magnificent shot into the top corner! Liverpool leads 2-1.&quot;
                           </div>
                         </div>
                       </div>
@@ -250,9 +251,9 @@ export default function CameraFiSolutions() {
                 <span className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></span>
                 Developer Handoff & Asset Optimization
               </span>
-              <h4 className="font-black text-neutral-900 text-lg mt-2">Balancing High-Fidelity Visuals with 1.5s Page Load Time</h4>
+              <h4 className="font-black text-neutral-900 text-lg mt-2">High-Fidelity Visuals, 1.5s Load Target</h4>
               <p className="text-sm text-neutral-600 leading-relaxed mt-1.5">
-                To render the full scrollable landing page design inside the MacBook monitor mockup without causing performance lag, I collaborated with the frontend engineering team to convert heavy raw Figma mockups into highly optimized, responsive WebP image layers. By setting up deferred asset loading and implementing CSS containment rules, we reduced the first contentful paint (FCP) time by 45% while preserving visual crispness.
+                I worked with frontend engineers to convert heavy Figma mockups into responsive WebP image layers. Deferred loading and CSS containment reduced FCP by 45% while keeping the mockup sharp.
               </p>
             </div>
           </div>
@@ -267,14 +268,14 @@ export default function CameraFiSolutions() {
       <section className="relative w-full flex flex-col items-center justify-center px-6 md:px-16 py-20 bg-white">
         <div className="max-w-4xl text-center mb-16 md:mb-24 z-10">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-black text-white bg-[#2362A2]">02</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-black text-white" style={{ backgroundColor: palette[2] }}>02</span>
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-neutral-400">Solution</span>
           </div>
           <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
             Multi-Surface Support
           </h3>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            A unified responsive design system offering seamless, customized experiences across Desktop Web, Tablet layout, and Mobile apps.
+            One responsive design system for desktop web, tablet, and mobile app screens.
           </p>
         </div>
 
@@ -303,10 +304,10 @@ export default function CameraFiSolutions() {
             <div className="flex-1 bg-neutral-950 text-white flex overflow-hidden text-xs">
               {/* Sidebar */}
               <div className="w-12 bg-neutral-900 border-r border-neutral-800 flex flex-col items-center py-4 gap-4 shrink-0">
-                <span className="w-6 h-6 rounded-lg bg-[#B8E218] flex items-center justify-center text-black font-black text-xs shadow-md">C</span>
+                <span className="w-6 h-6 rounded-lg flex items-center justify-center text-black font-black text-xs shadow-md" style={{ backgroundColor: palette[0] }}>C</span>
                 <div className="w-6 h-[1px] bg-neutral-800 my-1"></div>
                 <div className="flex flex-col gap-3.5">
-                  <span className="text-lg text-[#B8E218] cursor-pointer">📺</span>
+                  <span className="text-lg cursor-pointer" style={{ color: palette[0] }}>📺</span>
                   <span className="text-lg text-neutral-500 hover:text-white cursor-pointer transition-colors">🎛️</span>
                   <span className="text-lg text-neutral-500 hover:text-white cursor-pointer transition-colors">💬</span>
                   <span className="text-lg text-neutral-500 hover:text-white cursor-pointer transition-colors">📊</span>
@@ -374,10 +375,10 @@ export default function CameraFiSolutions() {
               {/* Header */}
               <div className="flex items-center justify-between border-b border-neutral-900 pb-1.5">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded bg-[#B8E218] flex items-center justify-center text-black font-black text-[9px]">C</span>
+                  <span className="w-4 h-4 rounded flex items-center justify-center text-black font-black text-[9px]" style={{ backgroundColor: palette[0] }}>C</span>
                   <span className="text-[10px] font-black tracking-tight">CameraFi Studio</span>
                 </div>
-                <span className="text-[7px] px-1 bg-neutral-800 text-[#B8E218] rounded border border-neutral-700">Tablet Mode</span>
+                <span className="text-[7px] px-1 rounded border border-neutral-700" style={{ backgroundColor: `${palette[0]}14`, color: palette[0] }}>Tablet Mode</span>
               </div>
 
               {/* Tablet Viewport content */}
@@ -399,18 +400,18 @@ export default function CameraFiSolutions() {
                   </div>
                   <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-2 flex flex-col justify-between">
                     <span className="text-neutral-500 font-bold uppercase tracking-wider text-[7px]">Audio Status</span>
-                    <span className="text-[#B8E218] font-bold mt-1">Normal</span>
+                    <span className="font-bold mt-1" style={{ color: palette[0] }}>Normal</span>
                   </div>
                   <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-2 col-span-2 flex flex-col justify-between overflow-hidden">
                     <span className="text-neutral-500 font-bold uppercase tracking-wider text-[7px]">Sources</span>
                     <div className="flex flex-col gap-1 mt-1 text-[7px]">
                       <div className="flex items-center justify-between text-neutral-300">
                         <span>• Game Link</span>
-                        <span className="text-green-500 font-bold">ON</span>
+                        <span className="font-bold" style={{ color: palette[1] }}>ON</span>
                       </div>
                       <div className="flex items-center justify-between text-neutral-300">
                         <span>• Webcam</span>
-                        <span className="text-green-500 font-bold">ON</span>
+                        <span className="font-bold" style={{ color: palette[1] }}>ON</span>
                       </div>
                     </div>
                   </div>

@@ -11,10 +11,10 @@ export default function SolidConnectionSolutions() {
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-neutral-400">Solution</span>
           </div>
           <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
-            Unified Information Experience
+            One Clear Main Page
           </h3>
           <p className="text-lg text-neutral-600">
-            We gathered scattered key information into a single main page, allowing users to navigate intuitively and take immediate action without friction.
+            We brought scattered school data, scores, channels, and actions into one page so users could understand where to go next.
           </p>
         </div>
 
@@ -80,10 +80,10 @@ export default function SolidConnectionSolutions() {
             <span className="text-xs font-bold uppercase tracking-[0.22em] text-neutral-400">Solution</span>
           </div>
           <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-4">
-            Systematic 9-Step Application Flow
+            9-Step Application Flow
           </h3>
           <p className="text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-            We broke down the complex application process into 9 intuitive screens, minimizing cognitive load. To reduce drop-off, we introduced a <strong>micro-interactive progress bar</strong> to visually chunk the journey and implemented <strong>real-time session autosave</strong>, preventing data loss and reducing user friction at each step.
+            We split the application into 9 focused screens. A <strong>progress bar</strong> made each step visible, and <strong>real-time autosave</strong> prevented data loss.
           </p>
         </div>
 
@@ -167,7 +167,7 @@ export default function SolidConnectionSolutions() {
             Verified Mentors & Mentees
           </h3>
           <p className="text-lg text-neutral-600">
-            Connecting trustworthy mentors with mentees seeking growth, we designed a platform that fosters continuous, meaningful relationships through an integrated community.
+            We connected applicants with verified alumni so they could ask specific questions and build trust before applying.
           </p>
         </div>
 
@@ -231,7 +231,7 @@ export default function SolidConnectionSolutions() {
             Role-Based UI & Developer Alignment
           </h3>
           <p className="text-lg text-neutral-600">
-            How we bridged the gap between user needs and engineering limits to launch our product on time.
+            How we balanced different user needs with engineering scope to launch on time.
           </p>
         </div>
 
@@ -241,12 +241,12 @@ export default function SolidConnectionSolutions() {
             <div className="text-red-500 font-black uppercase tracking-wider text-xs flex items-center gap-2">
               The Conflict
             </div>
-            <h4 className="text-lg font-black text-neutral-900">User Needs vs. Dev Timeline</h4>
+            <h4 className="text-lg font-black text-neutral-900">Two Roles, One Deadline</h4>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              We wanted to build two separate dashboards: one for Mentors to manage schedules, and one for Mentees to search for help. They had completely different goals, so they needed different interfaces.
+              Mentors needed schedule management. Mentees needed search and Q&A. Their goals were different, but the team had one 5-month launch window.
             </p>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              However, developers opposed this. Building two separate dashboards would take twice as long, making us miss our 5-month launch deadline.
+              Two fully separate dashboards would double development time and put the launch at risk.
             </p>
           </div>
 
@@ -255,12 +255,12 @@ export default function SolidConnectionSolutions() {
             <div className="text-amber-500 font-black uppercase tracking-wider text-xs flex items-center gap-2">
               The Rationale
             </div>
-            <h4 className="text-lg font-black text-neutral-900">Why We Couldn't Compromise</h4>
+            <h4 className="text-lg font-black text-neutral-900">Why One Page Wasn&apos;t Enough</h4>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Combining both dashboards into one would make the page too messy and confuse our users, causing many of them to leave the app.
+              Merging both roles into one page would make the flow crowded and confusing.
             </p>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              It would also create messy code, leading to bugs and higher maintenance costs in the future. We needed a clean split for both users and code quality.
+              It would also make future maintenance harder. We needed role clarity without rebuilding everything twice.
             </p>
           </div>
 
@@ -271,10 +271,10 @@ export default function SolidConnectionSolutions() {
             </div>
             <h4 className="text-lg font-black text-neutral-900">One Shell, Two Experiences</h4>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              I proposed a smart compromise: build one shared framework. The main navigation sidebar and layout were kept identical, which saved developers from coding everything twice.
+              I proposed one shared framework: the same navigation and layout, with role-specific content inside.
             </p>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              We only swapped the content inside based on who logged in (Mentor or Mentee). This saved 40% of development time while keeping the experience clean and simple.
+              This saved 40% of development time while keeping each role&apos;s experience clean.
             </p>
           </div>
         </div>
@@ -283,7 +283,7 @@ export default function SolidConnectionSolutions() {
         <div className="w-full max-w-5xl mt-12 bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex flex-col gap-2">
           <span className="text-indigo-900 font-black text-lg">Key Takeaway</span>
           <p className="text-sm text-indigo-750 max-w-4xl leading-relaxed">
-            "Good design isn't about fighting developers. It's about understanding their limits and finding a modular solution that works for both the user and the team."
+            &ldquo;Good design aligns user needs with team constraints, then turns both into a clear system.&rdquo;
           </p>
         </div>
       </section>

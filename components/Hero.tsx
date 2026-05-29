@@ -9,9 +9,10 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground/30 cursor-default leading-[1.1] max-w-5xl transition-colors duration-500">
           <span className="text-foreground">{hero.greeting}</span> is a{" "}
           <span className="hover:text-blue-600 transition-colors duration-300">UX/UI Designer</span>{" "}
-          <span className="hover:text-orange-500 transition-colors duration-300">delivering intuitive</span>,{" "}
-          <span className="hover:text-emerald-500 transition-colors duration-300">data-driven experiences</span>{" "}
-          through <span className="hover:text-purple-500 transition-colors duration-300">user-centered design</span> and <span className="hover:text-rose-500 transition-colors duration-300">full product ownership</span>.
+          <span className="hover:text-pink-500 transition-colors duration-300">turning research into</span>{" "}
+          <span className="hover:text-orange-500 transition-colors duration-300">clear flows</span>,{" "}
+          <span className="hover:text-emerald-500 transition-colors duration-300">usable interfaces</span>, and{" "}
+          <span className="hover:text-purple-500 transition-colors duration-300">measurable product outcomes</span>.
         </h1>
         <p className="text-base md:text-lg text-foreground/60 max-w-2xl mt-4 leading-relaxed">
           {hero.about}
