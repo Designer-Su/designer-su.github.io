@@ -10,6 +10,8 @@ import SolidConnectionSolutions from "@/components/SolidConnectionSolutions";
 import SolidConnectionImpact from "@/components/SolidConnectionImpact";
 import CameraFiSolutions from "@/components/CameraFiSolutions";
 import SmartFridgeSolutions from "@/components/SmartFridgeSolutions";
+import SoloWeddingResearchCharts from "@/components/SoloWeddingResearchCharts";
+import SolidConnectionUserFlowMap from "@/components/SolidConnectionUserFlowMap";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -246,7 +248,10 @@ export default async function ProjectPage({
       </section>      {/* 4. Background Quote */}
       <section id="background" className="px-6 mb-24 py-16 bg-neutral-50 scroll-mt-32">
         <div className="max-w-4xl mx-auto">
-          <p className="text-2xl md:text-4xl font-black leading-tight tracking-tight text-neutral-950">
+          <p 
+            className="text-2xl md:text-4xl font-black leading-tight tracking-tight text-neutral-950"
+            style={project.colors && project.colors.length > 0 ? { color: project.colors[0] } : {}}
+          >
             &quot;{project.background}&quot;
           </p>
         </div>
@@ -267,6 +272,10 @@ export default async function ProjectPage({
                 </div>
               ))}
             </div>
+          )}
+
+          {project.slug === 'fiora-solo-wedding' && (
+            <SoloWeddingResearchCharts />
           )}
 
           {cameraFiResearchChart && (
@@ -426,6 +435,9 @@ export default async function ProjectPage({
                 );
               })}
             </div>
+            {project.slug === 'solid-connection' && (
+              <SolidConnectionUserFlowMap />
+            )}
           </div>
         </section>
       )}
@@ -696,57 +708,81 @@ export default async function ProjectPage({
       )}
 
       {/* 7.7 Final Mockup Showcase */}
-      {project.slug !== 'camerafi-studio' && project.slug !== 'smart-fridge' && (
-        <section id="final-mockups" className="px-0 md:px-6 mb-40 scroll-mt-32 w-full overflow-x-clip">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="text-center mb-16 px-6">
-            <h2 className="text-sm font-black uppercase tracking-[0.28em] text-neutral-400 mb-4">Design Showcase</h2>
-            <p className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">Experience the Final Design</p>
+      {isSolidConnection && (
+        <section id="final-mockups" className="px-0 md:px-6 mb-40 scroll-mt-32 w-full">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="text-center mb-24 px-6">
+              <h2 className="text-sm font-black uppercase tracking-[0.28em] text-neutral-400 mb-4">Design Showcase</h2>
+              <p className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">Experience the Final Design</p>
+            </div>
+            
+            <div className="flex flex-nowrap overflow-x-auto md:overflow-visible gap-6 md:gap-8 justify-start md:justify-center items-center pb-8 md:pb-0 hide-scrollbar w-full px-6 md:px-0">
+              
+              {/* 1. Onboarding */}
+              <div className="flex flex-col items-center gap-4 shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-[180px] md:w-[240px] aspect-[9/19.5] rounded-[2rem] border-[4px] border-neutral-900 bg-white shadow-lg overflow-hidden relative">
+                  <div className="absolute top-0 w-full h-5 bg-neutral-900 flex justify-center items-start pt-1.5 z-20 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2 pointer-events-none">
+                    <div className="w-8 h-1 bg-neutral-800 rounded-full"></div>
+                  </div>
+                  <img
+                    src="/SC/onboarding/3.png"
+                    alt="Onboarding"
+                    className="absolute bottom-0 left-0 w-full h-[calc(100%-1.5rem)] object-contain object-top"
+                  />
+                </div>
+                <span className="text-xs md:text-sm font-bold text-neutral-500 tracking-wide uppercase">Onboarding</span>
+              </div>
+
+              {/* 2. Community */}
+              <div className="flex flex-col items-center gap-4 shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-[180px] md:w-[240px] aspect-[9/19.5] rounded-[2rem] border-[4px] border-neutral-900 bg-white shadow-lg overflow-hidden relative">
+                  <div className="absolute top-0 w-full h-5 bg-neutral-900 flex justify-center items-start pt-1.5 z-20 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2 pointer-events-none">
+                    <div className="w-8 h-1 bg-neutral-800 rounded-full"></div>
+                  </div>
+                  <img
+                    src="/SC/commu.png"
+                    alt="Community"
+                    className="absolute bottom-0 left-0 w-full h-[calc(100%-1.5rem)] object-contain object-top"
+                  />
+                </div>
+                <span className="text-xs md:text-sm font-bold text-neutral-500 tracking-wide uppercase">Community</span>
+              </div>
+
+              {/* 3. Main Dashboard */}
+              <div className="flex flex-col items-center gap-4 shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-[180px] md:w-[240px] aspect-[9/19.5] rounded-[2rem] border-[4px] border-neutral-900 bg-[#5950F6] shadow-lg overflow-hidden relative">
+                  <div className="absolute top-0 w-full h-5 bg-neutral-900 flex justify-center items-start pt-1.5 z-20 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2 pointer-events-none">
+                    <div className="w-8 h-1 bg-neutral-800 rounded-full"></div>
+                  </div>
+                  <div className="w-full h-full overflow-y-auto hide-scrollbar scroll-smooth z-10">
+                    <img
+                      src="/SC/Main/Main%20Eng.png"
+                      alt="Main Dashboard"
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                </div>
+                <span className="text-xs md:text-sm font-bold text-neutral-500 tracking-wide uppercase">Main Dashboard</span>
+              </div>
+
+              {/* 4. Applicant Status */}
+              <div className="flex flex-col items-center gap-4 shrink-0 hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-[180px] md:w-[240px] aspect-[9/19.5] rounded-[2rem] border-[4px] border-neutral-900 bg-white shadow-lg overflow-hidden relative">
+                  <div className="absolute top-0 w-full h-5 bg-neutral-900 flex justify-center items-start pt-1.5 z-20 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2 pointer-events-none">
+                    <div className="w-8 h-1 bg-neutral-800 rounded-full"></div>
+                  </div>
+                  <img
+                    src="/SC/applicant-status.png"
+                    alt="Applicant Status"
+                    className="absolute bottom-0 left-0 w-full h-[calc(100%-1.5rem)] object-contain object-top"
+                  />
+                </div>
+                <span className="text-xs md:text-sm font-bold text-neutral-500 tracking-wide uppercase">Apply Status</span>
+              </div>
+
+            </div>
           </div>
-          
-          <div className="relative w-full aspect-[4/5] md:aspect-[21/9] flex items-center justify-center">
-            {/* Center Main Mockup */}
-            <div className="absolute z-30 w-[60%] md:w-[22%] aspect-[9/19] rounded-[2rem] border-[4px] border-neutral-900 bg-white shadow-2xl flex items-center justify-center overflow-hidden transform hover:-translate-y-4 transition-transform duration-700">
-              <div className="absolute top-0 w-full h-5 bg-neutral-900 flex justify-center items-start pt-1.5 z-10 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2">
-                <div className="w-8 h-1 bg-neutral-800 rounded-full"></div>
-              </div>
-              <span className="text-neutral-400 font-bold uppercase tracking-widest text-xs md:text-sm">Main View</span>
-            </div>
-            
-            {/* Left Mockup 1 */}
-            <div className="absolute z-20 w-[55%] md:w-[20%] aspect-[9/19] rounded-[1.5rem] md:rounded-[2rem] border-[4px] border-neutral-800 bg-neutral-50 shadow-xl flex items-center justify-center overflow-hidden left-[-15%] md:left-[15%] transform -rotate-6 md:-rotate-3 translate-y-8 md:translate-y-12 opacity-90 hover:-translate-y-2 hover:opacity-100 transition-all duration-700">
-              <div className="absolute top-0 w-full h-5 bg-neutral-800 flex justify-center items-start pt-1.5 z-10 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2">
-                <div className="w-8 h-1 bg-neutral-700 rounded-full"></div>
-              </div>
-              <span className="text-neutral-400 font-bold uppercase tracking-widest text-[10px] md:text-xs">Sub View</span>
-            </div>
-            
-            {/* Right Mockup 1 */}
-            <div className="absolute z-20 w-[55%] md:w-[20%] aspect-[9/19] rounded-[1.5rem] md:rounded-[2rem] border-[4px] border-neutral-800 bg-neutral-50 shadow-xl flex items-center justify-center overflow-hidden right-[-15%] md:right-[15%] transform rotate-6 md:rotate-3 translate-y-8 md:translate-y-12 opacity-90 hover:-translate-y-2 hover:opacity-100 transition-all duration-700">
-              <div className="absolute top-0 w-full h-5 bg-neutral-800 flex justify-center items-start pt-1.5 z-10 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2">
-                <div className="w-8 h-1 bg-neutral-700 rounded-full"></div>
-              </div>
-              <span className="text-neutral-400 font-bold uppercase tracking-widest text-[10px] md:text-xs">Sub View</span>
-            </div>
-            
-            {/* Far Left Mockup */}
-            <div className="hidden md:flex absolute z-10 w-[18%] aspect-[9/19] rounded-[1.5rem] border-[4px] border-neutral-800 bg-neutral-100 shadow-lg items-center justify-center overflow-hidden left-[-2%] transform -rotate-6 translate-y-24 opacity-70 hover:-translate-y-4 hover:opacity-100 transition-all duration-700">
-              <div className="absolute top-0 w-full h-5 bg-neutral-800 flex justify-center items-start pt-1.5 z-10 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2">
-                <div className="w-8 h-1 bg-neutral-700 rounded-full"></div>
-              </div>
-              <span className="text-neutral-400 font-bold uppercase tracking-widest text-[10px]">Flow</span>
-            </div>
-            
-            {/* Far Right Mockup */}
-            <div className="hidden md:flex absolute z-10 w-[18%] aspect-[9/19] rounded-[1.5rem] border-[4px] border-neutral-800 bg-neutral-100 shadow-lg items-center justify-center overflow-hidden right-[-2%] transform rotate-6 translate-y-24 opacity-70 hover:-translate-y-4 hover:opacity-100 transition-all duration-700">
-              <div className="absolute top-0 w-full h-5 bg-neutral-800 flex justify-center items-start pt-1.5 z-10 rounded-b-xl max-w-[40%] left-1/2 -translate-x-1/2">
-                <div className="w-8 h-1 bg-neutral-700 rounded-full"></div>
-              </div>
-              <span className="text-neutral-400 font-bold uppercase tracking-widest text-[10px]">Flow</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
       )}
 
       {/* 9. Outcome / Impact */}

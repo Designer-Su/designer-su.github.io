@@ -72,7 +72,7 @@ export const portfolioData = {
         "Predictive Application: Developed a mock application system to visualize real-time competition rates and acceptance probabilities.",
         "Verified Community: Built a 1:1 mentor-mentee matching system connecting applicants with verified alumni."
       ],
-      background: "We hypothesized that by converting a blind, anxiety-inducing application process into a predictable, data-guided journey, we would increase user activation rates and establish a strong user engagement loop.",
+      background: "By transforming a blind, anxiety-inducing application process into a predictable, data-guided journey, we empower students to prepare with clarity and confidence.",
       research: {
         text: "We conducted in-depth interviews and surveys with 50+ prospective applicants and recent exchange students to identify exact drop-off points in the preparation funnel.",
         insights: [
@@ -335,9 +335,10 @@ export const portfolioData = {
       slug: "fiora-solo-wedding",
       title: "Fiora, Solo Wedding",
       category: "Web & Mobile UI/UX",
-      thumbnail: "/Thumbnail/Fiora,%20Solo%20weddingmain.png",
-      image: "/Thumbnail/Fiora,%20Solo%20weddingmain.png",
+      thumbnail: "/Thumbnail/Solo%20wedding%20main.png",
+      image: "/Thumbnail/Solo%20wedding%20main.png",
       imagePosition: "object-center",
+      colors: ["#A93E32", "#D36155", "#E89D95", "#F7D6D2"],
       summary: "A self-celebration ritual platform that helps users mark personal milestones through personalized color themes, guided declarations, and a private self-narrative archive.",
       overview: {
         year: "2024",
@@ -350,10 +351,12 @@ export const portfolioData = {
         "Ritual Experience Design: Uses guided ceremony flows and multi-modal inputs to turn a personal promise into a formal declaration.",
         "Self-Narrative Archive: Preserves emotional themes and declarations so users can revisit their personal growth over time."
       ],
-      background: "Fiora asks a fundamental question: What happens when the object of celebration becomes the self? It reframes a wedding-inspired experience into a warm ritual for self-acceptance.",
+      background: "What happens when the object of celebration is the self? Fiora transforms wedding traditions into a warm ritual for self-acceptance.",
       research: {
-        text: "Grounded in social trend analysis on the 'me generation', we conducted user interviews to understand attitudes toward solo rituals.",
+        text: "Grounded in demographic shifts and social trend analysis, we examined the rapid rise of single-person households and the concurrent decline in traditional marriages to validate the necessity of alternative self-celebration rituals.",
         insights: [
+          { title: "Demographic Shift", description: "The proportion of single-person households in Korea surged from 29.3% in 2018 to 35.5% in 2023, reflecting a fast-growing demographic prioritizing individual lifestyles." },
+          { title: "Marriage Decline", description: "Annual marriages plummeted from over 305k in 2014 to under 194k in 2023, showing that traditional social milestones are losing their structural dominance." },
           { title: "The Social Hurdle", description: "Users needed a safe, private way to celebrate themselves without feeling exposed or judged by conventional norms." },
           { title: "Psychological Value", description: "Research showed that formalized rituals significantly reduce anxiety and strengthen self-efficacy." }
         ]
@@ -361,13 +364,13 @@ export const portfolioData = {
       ideation: {
         text: "The experience was structured as a three-step architecture: Exploration (self-discovery), Transformation (visual theme), and Manifestation (ceremony).",
         points: [
-          { title: "HMW: Legitimization", description: "How might we design an interface that makes solo celebration feel intentional, premium, and legitimate?" },
+          { title: "HMW: Validation", description: "How might we design an interface that makes solo celebration feel intentional, premium, and meaningful?" },
           { title: "HMW: Expression", description: "How might we provide multi-modal inputs (voice, text) to accommodate different comfort levels during the declaration?" }
         ]
       },
       design: {
         text: "The UI balances emotional storytelling with practical interaction. Personalized color themes, multi-modal input support, and spacious typography create an interface that feels ceremonial rather than transactional.",
-        image: "/Thumbnail/Fiora,%20Solo%20weddingmain.png",
+        image: "/Thumbnail/Solo%20wedding%20main.png",
         features: [
           { title: "Personalized Color Theme", description: "The selected emotional color is applied across the interface so the experience feels personal and coherent.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" },
           { title: "Multi-Modal Input Support", description: "Users can record their declaration through voice, text, or selfie-based interaction depending on comfort level.", image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800" },
@@ -387,8 +390,8 @@ export const portfolioData = {
         {
           title: "Testing & Iterations",
           description: "The onboarding flow was refined to feel less artificial by introducing question-based color suggestions and delayed choice reveal. Declaration writing support was also strengthened with AI-assisted sentence guidance based on selected keywords.",
-          beforeImage: "/Thumbnail/Fiora,%20Solo%20weddingmain.png",
-          afterImage: "/Thumbnail/Fiora,%20Solo%20weddingmain.png"
+          beforeImage: "/Thumbnail/Solo%20wedding%20main.png",
+          afterImage: "/Thumbnail/Solo%20wedding%20main.png"
         }
       ],
       impact: {
