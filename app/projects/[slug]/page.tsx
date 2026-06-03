@@ -12,6 +12,7 @@ import CameraFiSolutions from "@/components/CameraFiSolutions";
 import SmartFridgeSolutions from "@/components/SmartFridgeSolutions";
 import SmartFridgeUserFlowMap from "@/components/SmartFridgeUserFlowMap";
 import SoloWeddingResearchCharts from "@/components/SoloWeddingResearchCharts";
+import SoloWeddingSurveyMockups from "@/components/SoloWeddingSurveyMockups";
 import SolidConnectionUserFlowMap from "@/components/SolidConnectionUserFlowMap";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -611,6 +612,8 @@ export default async function ProjectPage({
       </section>
 
       {/* 7.1 Full-Screen Feature Highlights */}
+      {project.slug === 'fiora-solo-wedding' && <SoloWeddingSurveyMockups />}
+
       {isSolidConnection ? (
         <SolidConnectionSolutions />
       ) : project.slug === 'camerafi-studio' ? (
