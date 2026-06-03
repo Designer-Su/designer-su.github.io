@@ -402,8 +402,8 @@ export const portfolioData = {
       colors: ["#A93E32", "#D36155", "#E89D95", "#F7D6D2"],
       summary: "A self-celebration platform for marking personal milestones with color themes, guided declarations, and a private archive.",
       overview: {
-        year: "2024",
-        duration: "8 Weeks",
+        year: "2025",
+        duration: "3 Months",
         role: "Lead Product Designer (Brand Identity & UX/UI Design)"
       },
       problem: "Celebration culture often centers on social milestones like marriage. Personal growth, recovery, and self-overcoming rarely get the same kind of ritual or recognition.",
