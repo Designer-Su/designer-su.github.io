@@ -404,7 +404,7 @@ export const portfolioData = {
       overview: {
         year: "2025",
         duration: "3 Months",
-        role: "Lead Product Designer (Brand Identity & UX/UI Design)"
+        role: "Product Designer (Brand Identity & UX/UI Design)"
       },
       problem: "Celebration culture often centers on social milestones like marriage. Personal growth, recovery, and self-overcoming rarely get the same kind of ritual or recognition.",
       solution: [
