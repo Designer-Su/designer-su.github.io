@@ -378,9 +378,7 @@ export const portfolioData = {
             "\"This recipe looks useful, but I am not sure if I already have every ingredient.\"",
             "\"Event Planner sounds helpful, but I do not immediately know when I would use it.\"",
             "\"After adding an item, I want a clearer sign that it has been saved.\""
-          ],
-          beforeImage: "/SF/main.png",
-          afterImage: "/SF/mockup/Main.png"
+          ]
         }
       ],
       impact: {
