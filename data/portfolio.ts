@@ -229,8 +229,8 @@ export const portfolioData = {
       },
       testing: [
         {
-          title: "A/B Testing: Text-Heavy (A) vs. Interactive Simulator (B)",
-          description: "We compared the original layout with an interactive simulator. In the original, users skipped dense feature text and dropped off by 34%. In the simulator version, 68% moved directly to stream setup and overall CTR increased by 28%."
+          title: "A/B Testing: Icon-Centric Grid (A) vs. Text-Heavy Chips (B)",
+          description: "We compared icon-centric grid chips with text-heavy chips for sports category selection. Version A (Icon-Centric) was selected as the winner; in fast-paced live environments, visual sports icons minimized cognitive load and enabled instant recognition, raising setup CTR by 28% and completion rate by 34%."
         }
       ],
       impact: {
