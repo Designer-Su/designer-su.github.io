@@ -52,17 +52,17 @@ const sportsB = [
   { id: "other", label: "Other" },
 ];
 
-const BallIcon = ({ active }: { active: boolean }) => (
+const BallIcon = ({ active, className = "w-6 h-6" }: { active: boolean; className?: string }) => (
   <svg 
-    className={`w-6 h-6 transition-colors duration-200 ${active ? "text-[#37C556]" : "text-neutral-400"}`} 
+    className={`${className} transition-colors duration-200 ${active ? "text-[#37C556]" : "text-neutral-400"}`} 
     viewBox="0 0 24 24" 
     fill="none" 
     stroke="currentColor" 
-    strokeWidth="1.8"
+    strokeWidth="1.5"
   >
     <circle cx="12" cy="12" r="9" />
-    <path d="M17.5 7.5a9 9 0 0 0-11 0" />
-    <path d="M6.5 16.5a9 9 0 0 0 11 0" />
+    <path d="M8.5 3.5a9.5 9.5 0 0 0 0 17" strokeDasharray="1.5 1.5" />
+    <path d="M15.5 3.5a9.5 9.5 0 0 1 0 17" strokeDasharray="1.5 1.5" />
   </svg>
 );
 
@@ -134,7 +134,7 @@ export default function CameraFiABTest() {
                             : "border-neutral-200 bg-white"
                         }`}
                       >
-                        <BallIcon active={isSelected} />
+                        <BallIcon active={isSelected} className="w-7 h-7" />
                       </div>
                       <span className={`text-[9px] font-bold text-center leading-none transition-colors duration-200 ${
                         isSelected ? "text-[#37C556]" : "text-neutral-500"
@@ -198,17 +198,7 @@ export default function CameraFiABTest() {
                       }`}
                     >
                       {hasIcon && (
-                        <svg 
-                          className={`w-3.5 h-3.5 ${isSelected ? "text-[#37C556]" : "text-neutral-400"}`} 
-                          viewBox="0 0 24 24" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2"
-                        >
-                          <circle cx="12" cy="12" r="9" />
-                          <path d="M17.5 7.5a9 9 0 0 0-11 0" />
-                          <path d="M6.5 16.5a9 9 0 0 0 11 0" />
-                        </svg>
+                        <BallIcon active={isSelected} className="w-3.5 h-3.5" />
                       )}
                       <span>{sport.label}</span>
                     </button>
