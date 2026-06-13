@@ -226,26 +226,93 @@ const SportIcon = ({ id, active, className = "w-6 h-6" }: { id: string; active: 
 };
 
 export default function CameraFiABTest() {
-  const [selectedA, setSelectedA] = useState("all");
+  const [selectedA, setSelectedA] = useState<Record<string, boolean>>({ all: true });
   const [selectedB, setSelectedB] = useState<Record<string, boolean>>(
     sportsB.reduce((acc, sport) => {
       acc[sport.id] = !!sport.initialSelected;
       return acc;
     }, {} as Record<string, boolean>)
   );
-  const [toastMessage, setToastMessage] = useState("");
+  const [toastMessageA, setToastMessageA] = useState("");
+  const [toastMessageB, setToastMessageB] = useState("");
+
+  const toggleA = (id: string) => {
+    if (id === "all") {
+      setSelectedA({ all: true });
+      return;
+    }
+
+    setSelectedA((prev) => {
+      const isCurrentlySelected = !!prev[id];
+      const newSelected = { ...prev };
+
+      if (isCurrentlySelected) {
+        delete newSelected[id];
+        // If nothing is selected, fall back to "all"
+        const remainingKeys = Object.keys(newSelected).filter((k) => k !== "all" && newSelected[k]);
+        if (remainingKeys.length === 0) {
+          return { all: true };
+        }
+        return newSelected;
+      } else {
+        // Count currently selected excluding "all"
+        const currentCount = Object.keys(prev).filter((k) => k !== "all" && prev[k]).length;
+        if (currentCount >= 3) {
+          setToastMessageA("Up to 3 sports can be selected.");
+          setTimeout(() => setToastMessageA(""), 2500);
+          return prev;
+        }
+        delete newSelected["all"];
+        newSelected[id] = true;
+        return newSelected;
+      }
+    });
+  };
 
   const toggleB = (id: string) => {
-    setSelectedB((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
+    if (id === "common") {
+      setSelectedB({ common: true });
+      return;
+    }
+
+    setSelectedB((prev) => {
+      const isCurrentlySelected = !!prev[id];
+      const newSelected = { ...prev };
+
+      if (isCurrentlySelected) {
+        delete newSelected[id];
+        // If nothing is selected, fall back to "common"
+        const remainingKeys = Object.keys(newSelected).filter((k) => k !== "common" && newSelected[k]);
+        if (remainingKeys.length === 0) {
+          return { common: true };
+        }
+        return newSelected;
+      } else {
+        // Count currently selected excluding "common"
+        const currentCount = Object.keys(prev).filter((k) => k !== "common" && prev[k]).length;
+        if (currentCount >= 3) {
+          setToastMessageB("Up to 3 sports can be selected.");
+          setTimeout(() => setToastMessageB(""), 2500);
+          return prev;
+        }
+        delete newSelected["common"];
+        newSelected[id] = true;
+        return newSelected;
+      }
+    });
   };
 
   const handleApplyA = () => {
-    const selectedLabel = sportsA.find((s) => s.id === selectedA)?.label || "All";
-    setToastMessage(`Filter Applied: ${selectedLabel}`);
-    setTimeout(() => setToastMessage(""), 2500);
+    const selectedLabels = sportsA
+      .filter((s) => selectedA[s.id])
+      .map((s) => s.label);
+    
+    if (selectedLabels.length === 0 || selectedA["all"]) {
+      setToastMessageA("Filter Applied: All");
+    } else {
+      setToastMessageA(`Filter Applied: ${selectedLabels.join(", ")}`);
+    }
+    setTimeout(() => setToastMessageA(""), 2500);
   };
 
   const handleApplyB = () => {
@@ -253,8 +320,12 @@ export default function CameraFiABTest() {
       .filter((s) => selectedB[s.id])
       .map((s) => s.label);
     
-    setToastMessage(`Filter Applied: ${selectedLabels.length} items selected`);
-    setTimeout(() => setToastMessage(""), 2500);
+    if (selectedLabels.length === 0 || selectedB["common"]) {
+      setToastMessageB("Filter Applied: General");
+    } else {
+      setToastMessageB(`Filter Applied: ${selectedLabels.join(", ")}`);
+    }
+    setTimeout(() => setToastMessageB(""), 2500);
   };
 
   return (
@@ -274,7 +345,7 @@ export default function CameraFiABTest() {
 
             {/* A Screen Header */}
             <div className="h-14 pt-4 px-4 flex items-center bg-[#8b919d]/90 text-white shrink-0">
-              <button onClick={() => setSelectedA("all")} className="p-1 hover:opacity-70 transition-opacity">
+              <button onClick={() => toggleA("all")} className="p-1 hover:opacity-70 transition-opacity">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -285,11 +356,11 @@ export default function CameraFiABTest() {
             <div className="flex-grow bg-white overflow-y-auto hide-scrollbar p-3 sm:p-4 pb-32 rounded-t-3xl mt-[-8px] z-10">
               <div className="grid grid-cols-4 gap-y-3 gap-x-1 justify-items-center">
                 {sportsA.map((sport) => {
-                  const isSelected = selectedA === sport.id;
+                  const isSelected = !!selectedA[sport.id];
                   return (
                     <button 
                       key={sport.id}
-                      onClick={() => setSelectedA(sport.id)}
+                      onClick={() => toggleA(sport.id)}
                       className="flex flex-col items-center gap-1 p-0.5 sm:p-1 transition-transform active:scale-95 max-w-full"
                     >
                       <div 
@@ -321,6 +392,13 @@ export default function CameraFiABTest() {
                 Apply Filter
               </button>
             </div>
+
+            {/* In-App Toast Alert Feedback for A */}
+            {toastMessageA && (
+              <div className="absolute top-16 left-1/2 -translate-x-1/2 bg-neutral-900/90 text-white text-[10px] font-bold px-4 py-2 rounded-full shadow-lg z-30 transition-all duration-300 animate-bounce text-center whitespace-nowrap">
+                {toastMessageA}
+              </div>
+            )}
           </div>
         </div>
 
@@ -389,10 +467,10 @@ export default function CameraFiABTest() {
               </div>
             </div>
 
-            {/* In-App Toast Alert Feedback */}
-            {toastMessage && (
+            {/* In-App Toast Alert Feedback for B */}
+            {toastMessageB && (
               <div className="absolute top-16 left-1/2 -translate-x-1/2 bg-neutral-900/90 text-white text-[10px] font-bold px-4 py-2 rounded-full shadow-lg z-30 transition-all duration-300 animate-bounce text-center whitespace-nowrap">
-                {toastMessage}
+                {toastMessageB}
               </div>
             )}
           </div>

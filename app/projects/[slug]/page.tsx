@@ -111,7 +111,6 @@ export default async function ProjectPage({
     { id: "ideation", label: labels.ideation },
     ...(project.testing && project.testing.length > 0 ? [{ id: "testing", label: labels.testing }] : []),
     { id: "design", label: labels.design },
-    ...(isRealProject && (project.design as any).hiFiGallery ? [{ id: "hifi", label: labels.hifi }] : []),
     { id: "impact", label: labels.impact }
   ];
 
