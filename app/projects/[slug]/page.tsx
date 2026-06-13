@@ -12,7 +12,10 @@ import CameraFiSolutions from "@/components/CameraFiSolutions";
 import SmartFridgeSolutions from "@/components/SmartFridgeSolutions";
 import SmartFridgeUserFlowMap from "@/components/SmartFridgeUserFlowMap";
 import SoloWeddingResearchCharts from "@/components/SoloWeddingResearchCharts";
+import SoloWeddingPersona from "@/components/SoloWeddingPersona";
 import SoloWeddingSurveyMockups from "@/components/SoloWeddingSurveyMockups";
+import SoloWeddingTypes from "@/components/SoloWeddingTypes";
+import SoloWeddingDeclaration from "@/components/SoloWeddingDeclaration";
 import SolidConnectionUserFlowMap from "@/components/SolidConnectionUserFlowMap";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -277,7 +280,10 @@ export default async function ProjectPage({
           )}
 
           {project.slug === 'fiora-solo-wedding' && (
-            <SoloWeddingResearchCharts />
+            <>
+              <SoloWeddingResearchCharts />
+              <SoloWeddingPersona />
+            </>
           )}
 
           {cameraFiResearchChart && (
@@ -551,12 +557,41 @@ export default async function ProjectPage({
                   )}
 
                   {"findings" in test && test.findings && test.findings.length > 0 && (
-                    <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-6">
-                      <h4 className="text-base font-black text-emerald-700">Research Findings</h4>
+                    <div 
+                      className="rounded-2xl border p-6"
+                      style={
+                        project.colors && project.colors.length > 0
+                          ? {
+                              borderColor: `${project.colors[0]}25`,
+                              backgroundColor: `${project.colors[0]}08`,
+                            }
+                          : {
+                              borderColor: "#e2e8f0",
+                              backgroundColor: "#f8fafc",
+                            }
+                      }
+                    >
+                      <h4 
+                        className="text-base font-black"
+                        style={
+                          project.colors && project.colors.length > 0
+                            ? { color: project.colors[0] }
+                            : { color: "#475569" }
+                        }
+                      >
+                        Research Findings
+                      </h4>
                       <ul className="mt-4 flex flex-col gap-3">
                         {test.findings.map((finding: string) => (
-                          <li key={finding} className="flex gap-3 text-sm leading-relaxed text-emerald-950">
-                            <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                          <li key={finding} className="flex gap-3 text-sm leading-relaxed text-neutral-800">
+                            <span 
+                              className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full" 
+                              style={
+                                project.colors && project.colors.length > 0
+                                  ? { backgroundColor: project.colors[0] }
+                                  : { backgroundColor: "#64748b" }
+                              }
+                            />
                             <span>{finding}</span>
                           </li>
                         ))}
@@ -569,7 +604,12 @@ export default async function ProjectPage({
                       {test.userQuotes.map((quote: string) => (
                         <blockquote
                           key={quote}
-                          className="relative rounded-[1.5rem] border border-neutral-200 bg-white px-5 py-4 text-base font-semibold leading-relaxed text-neutral-800 shadow-sm before:absolute before:-bottom-2 before:left-8 before:h-4 before:w-4 before:rotate-45 before:border-b before:border-r before:border-neutral-200 before:bg-white after:absolute after:left-4 after:top-2 after:text-4xl after:font-black after:leading-none after:text-emerald-100 after:content-['“']"
+                          className="relative rounded-[1.5rem] border border-neutral-200 bg-white px-5 py-4 text-base font-semibold leading-relaxed text-neutral-800 shadow-sm before:absolute before:-bottom-2 before:left-8 before:h-4 before:w-4 before:rotate-45 before:border-b before:border-r before:border-neutral-200 before:bg-white after:absolute after:left-4 after:top-2 after:text-4xl after:font-black after:leading-none after:text-[var(--quote-color)] after:content-['“']"
+                          style={{
+                            "--quote-color": project.colors && project.colors.length > 0 
+                              ? `${project.colors[0]}25` 
+                              : "#e2e8f0"
+                          } as any}
                         >
                           <span className="relative z-10 block pl-4">{quote}</span>
                         </blockquote>
@@ -577,18 +617,18 @@ export default async function ProjectPage({
                     </div>
                   )}
                   
-                  {project.slug !== 'smart-fridge' && (
+                  {(test as any).beforeImage && (test as any).afterImage && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="flex flex-col gap-3">
                         <span className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">Before</span>
                         <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-neutral-100">
-                          <Image src={test.beforeImage} alt="Before" fill className="object-cover" />
+                          <Image src={(test as any).beforeImage} alt="Before" fill className="object-cover" />
                         </div>
                       </div>
                       <div className="flex flex-col gap-3">
                         <span className="text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">After</span>
                         <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-neutral-100">
-                          <Image src={test.afterImage} alt="After" fill className="object-cover" />
+                          <Image src={(test as any).afterImage} alt="After" fill className="object-cover" />
                         </div>
                       </div>
                     </div>
@@ -612,7 +652,13 @@ export default async function ProjectPage({
       </section>
 
       {/* 7.1 Full-Screen Feature Highlights */}
-      {project.slug === 'fiora-solo-wedding' && <SoloWeddingSurveyMockups />}
+      {project.slug === 'fiora-solo-wedding' && (
+        <>
+          <SoloWeddingSurveyMockups />
+          <SoloWeddingTypes />
+          <SoloWeddingDeclaration />
+        </>
+      )}
 
       {isSolidConnection ? (
         <SolidConnectionSolutions />

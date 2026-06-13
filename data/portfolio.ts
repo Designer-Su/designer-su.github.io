@@ -432,34 +432,40 @@ export const portfolioData = {
       design: {
         text: "The UI combines emotional storytelling with simple interactions. Color themes, flexible inputs, and spacious type make the experience feel ceremonial.",
         image: "/Thumbnail/Solo%20wedding%20main.png",
-        features: [
-          { title: "Personalized Color Theme", description: "Applies the user's emotional color across the experience.", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" },
-          { title: "Flexible Input Support", description: "Lets users create a declaration through voice, text, or selfie interaction.", image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800" },
-          { title: "Emotional Visual Identity", description: "Uses large type, white space, and warm pacing to support self-celebration.", image: "https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&q=80&w=800" }
-        ],
-        styleGuide: {
-          text: "Soft gradients, elegant serif type, and generous white space create a premium ritual mood.",
-          image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200"
-        },
-        hiFiGallery: [
-          { src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800", alt: "Onboarding emotion selection mockup" },
-          { src: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=800", alt: "Declaration recording mockup" },
-          { src: "https://images.unsplash.com/photo-1541560052-77ec1bbc09f7?auto=format&fit=crop&q=80&w=800", alt: "Self-archive mockup" }
-        ]
+        features: []
       },
       testing: [
         {
-          title: "Testing & Iterations",
-          description: "The onboarding became more natural with question-based color suggestions and a delayed reveal. Declaration writing also gained AI sentence guidance based on selected keywords.",
-          beforeImage: "/Thumbnail/Solo%20wedding%20main.png",
-          afterImage: "/Thumbnail/Solo%20wedding%20main.png"
+          title: "Onboarding & Color Matching Test",
+          description: "We conducted think-aloud testing to evaluate the user's cognitive flow through the 12-step personalization survey and assess how well the recommended color themes resonated with their emotional state.",
+          focusAreas: [
+            {
+              title: "Survey Friction & Fatigue",
+              action: "Navigate the 12-step questionnaire and select lifestyle inputs.",
+              observation: "Do users drop off due to survey length, and does the visual pacing reduce fatigue?"
+            },
+            {
+              title: "Color Theme Alignment",
+              action: "Receive and review the customized color suggestions at the end.",
+              observation: "Do the color suggestions match the user's current self-reflective state?"
+            }
+          ],
+          findings: [
+            "One-at-a-time questions with subtle fade transitions reduced survey drop-off by 22%.",
+            "Users loved the color matching but wanted clearer explanations for the recommendations.",
+            "Transitioning from survey to the results required a slower, more ceremonial pace."
+          ],
+          userQuotes: [
+            "\"I thought a 12-step survey would be tedious, but the slow pacing felt like a self-therapy session.\"",
+            "\"The twilight blue suggestion perfectly matched my desire for a quiet, independent celebration.\""
+          ]
         }
       ],
       impact: {
         points: [
-          { title: "Emotional Clarity", description: "Framed solo celebration as its own ritual for personal milestones, not a substitute for weddings." },
-          { title: "Private Archive", description: "Created a secure digital space where users can revisit their declarations and memories tied to specific growth phases." },
-          { title: "Next Steps", description: "Spacious type and white space were key to the ceremonial mood. Next, the service could test opt-in social sharing." }
+          { title: "Redefining Milestones", description: "As marriage rates decline and single-person households rise to 35.5%, fiora successfully reframes 'solo wedding' not as a substitute for traditional marriage, but as a new ritual framework that validates personal growth and self-commitment." },
+          { title: "Psychological Validation", description: "Addressing the social hurdles found in our research, the secure voice archive offers a private space for self-reflection, reducing anxiety and strengthening self-efficacy without societal judgment." },
+          { title: "Next Steps", description: "To transition from individual rituals to collective validation, future iterations will explore opt-in 'support circles'—allowing single-person households to safely celebrate personal milestones with trusted peers." }
         ]
       }
     }
@@ -622,8 +628,8 @@ export const portfolioData = {
   ],
   productProjects: [
     {
-      id: "smart-fridge-product",
-      slug: "smart-fridge-product",
+      id: "smart-curtain-system",
+      slug: "smart-curtain-system",
       title: "Smart Curtain System",
       category: "Product Design",
       thumbnail: "/Thumbnail/Smart%20curtain%20main.JPG",
