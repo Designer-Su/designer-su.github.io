@@ -213,10 +213,20 @@ export const portfolioData = {
         }
       },
       ideation: { 
-        text: "We reduced first-use friction by matching the interface to the creator's broadcasting flow.",
+        text: "We established a three-pronged design strategy to reduce cognitive load and deliver a modernized, cohesive experience.",
         points: [
-          { title: "Opportunity: Contextual Reveal", description: "Show only the tools that match the user's current task." },
-          { title: "Opportunity: Interactive Onboarding", description: "Replace long feature explanations with screen-based walkthroughs." }
+          { 
+            title: "Strategy: FAB-Based UI Restructuring", 
+            description: "Transitioned from displaying all features at once to a contextual reveal. The floating action button shows only context-relevant creation options (Real-Time Caption · Scoreboard · Event), minimizing decision fatigue." 
+          },
+          { 
+            title: "Strategy: IA Redesign", 
+            description: "Simplified navigation (Home · Events · My Channel · More) and grouped related features. Rebuilt the information hierarchy based on actual usage frequency to streamline broadcasting setups." 
+          },
+          { 
+            title: "Strategy: Brand System Renewal", 
+            description: "Transitioned from a function-centric to a value-oriented UI representing trust, expertise, and speed. Delivered a clean logo redesign and a unified brand system with consistent fonts, colors, and microcopy." 
+          }
         ] 
       },
       design: {
