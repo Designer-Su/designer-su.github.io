@@ -9,6 +9,7 @@ import SolidConnectionDesignSystem from "@/components/SolidConnectionDesignSyste
 import SolidConnectionSolutions from "@/components/SolidConnectionSolutions";
 import SolidConnectionImpact from "@/components/SolidConnectionImpact";
 import CameraFiSolutions from "@/components/CameraFiSolutions";
+import CameraFiABTest from "@/components/CameraFiABTest";
 import SmartFridgeSolutions from "@/components/SmartFridgeSolutions";
 import SmartFridgeUserFlowMap from "@/components/SmartFridgeUserFlowMap";
 import SoloWeddingResearchCharts from "@/components/SoloWeddingResearchCharts";
@@ -632,6 +633,10 @@ export default async function ProjectPage({
                         </div>
                       </div>
                     </div>
+                  )}
+
+                  {project.slug === 'camerafi-studio' && test.title.includes("A/B Testing") && (
+                    <CameraFiABTest />
                   )}
                 </div>
               ))}

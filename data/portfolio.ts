@@ -230,9 +230,7 @@ export const portfolioData = {
       testing: [
         {
           title: "A/B Testing: Text-Heavy (A) vs. Interactive Simulator (B)",
-          description: "We compared the original layout with an interactive simulator. In the original, users skipped dense feature text and dropped off by 34%. In the simulator version, 68% moved directly to stream setup and overall CTR increased by 28%.",
-          beforeImage: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=800",
-          afterImage: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&q=80&w=800"
+          description: "We compared the original layout with an interactive simulator. In the original, users skipped dense feature text and dropped off by 34%. In the simulator version, 68% moved directly to stream setup and overall CTR increased by 28%."
         }
       ],
       impact: {
