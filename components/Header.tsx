@@ -4,25 +4,25 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full pt-3">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="relative overflow-hidden rounded-full border border-white/40 bg-white/30 px-6 py-3.5 shadow-[0_12px_30px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.5)] backdrop-blur-2xl backdrop-saturate-[190%] transition-all duration-300">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/30 to-transparent" />
+        <div className="relative overflow-hidden rounded-[24px] px-6 py-3.5 ios-glass-nav">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/12 to-transparent opacity-45" />
           <div className="relative z-10 flex items-center justify-between">
-            <Link href="/" className="font-semibold text-lg tracking-tight">
+            <Link href="/" className="font-bold text-lg tracking-tight hover:opacity-80 transition-opacity">
               Sukyeong Lee
             </Link>
-            <nav className="flex gap-6 text-sm font-medium text-foreground/80">
-              <Link href="/about" className="hover:text-foreground transition-colors">
+            <nav className="flex gap-6 text-sm font-semibold">
+              <Link href="/about" className="text-[var(--ios-text-secondary)] hover:text-[var(--ios-text)] transition-colors duration-200">
                 About me
               </Link>
-              <Link href="/#uxui" className="hover:text-foreground transition-colors">
+              <Link href="/#uxui" className="text-[var(--ios-text-secondary)] hover:text-[var(--ios-text)] transition-colors duration-200">
                 UX/UI
               </Link>
               {/*
-              <Link href="/#branding" className="hover:text-foreground transition-colors">
+              <Link href="/#branding" className="text-[var(--ios-text-secondary)] hover:text-[var(--ios-text)] transition-colors duration-200">
                 Branding
               </Link>
               */}
-              <Link href="/#product" className="hover:text-foreground transition-colors">
+              <Link href="/#product" className="text-[var(--ios-text-secondary)] hover:text-[var(--ios-text)] transition-colors duration-200">
                 Product
               </Link>
             </nav>
