@@ -4,9 +4,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full pt-3">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="relative overflow-hidden rounded-full border border-white/35 bg-white/10 px-5 py-4 shadow-[0_14px_40px_rgba(0,0,0,0.08)] backdrop-blur-3xl backdrop-saturate-200 ring-1 ring-white/30">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/40 via-white/10 to-transparent" />
-          <div className="pointer-events-none absolute inset-0 rounded-full border border-white/20" />
+        <div className="relative overflow-hidden rounded-full border border-white/40 bg-white/30 px-6 py-3.5 shadow-[0_12px_30px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.5)] backdrop-blur-2xl backdrop-saturate-[190%] transition-all duration-300">
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/30 to-transparent" />
           <div className="relative z-10 flex items-center justify-between">
             <Link href="/" className="font-semibold text-lg tracking-tight">
               Sukyeong Lee
