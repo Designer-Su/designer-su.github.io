@@ -168,7 +168,7 @@ export default async function ProjectPage({
           {(project.overview.web || project.overview.git) && (
             <div className="col-span-1 md:col-span-2 mt-6 flex flex-wrap gap-4">
               {project.overview.web && (
-                <a href={project.overview.web} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 px-6 py-3 rounded-full border border-foreground/10 bg-foreground/5 hover:bg-blue-500/10 hover:border-blue-500/30 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 font-bold text-sm uppercase tracking-wider">
+                <a href={project.overview.web} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 px-6 py-3 rounded-full border border-foreground/10 bg-foreground/5 hover:bg-blue-500/10 hover:border-blue-500/30 hover:text-blue-600 transition-all duration-300 font-bold text-sm uppercase tracking-wider">
                   {project.overview.logo ? (
                     <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white flex items-center justify-center border border-foreground/10 flex-shrink-0">
                       <Image src={project.overview.logo} alt="Logo" fill className="object-contain p-1 group-hover:scale-110 transition-transform duration-300" />
