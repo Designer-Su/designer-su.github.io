@@ -335,7 +335,7 @@ export default function CameraFiABTest() {
         
         {/* Phone A: Traditional Grid Layout */}
         <div className="w-full flex flex-col items-center gap-4">
-          <span className="text-xs sm:text-sm font-black text-[#37C556] uppercase tracking-widest text-center px-2">Version A: Icon-Centric Grid (Winner)</span>
+          <span className="text-xs sm:text-sm font-black text-neutral-500 uppercase tracking-widest text-center px-2">Version A: Icon-Centric Grid</span>
           
           <div className="w-full max-w-[270px] sm:max-w-[300px] aspect-[9/18.5] border-[4px] border-neutral-900 rounded-[2.5rem] bg-[#9CA3AF] shadow-xl overflow-hidden relative flex flex-col">
             {/* Notch */}
@@ -404,7 +404,7 @@ export default function CameraFiABTest() {
 
         {/* Phone B: Interactive Chips & Bottom Sheet */}
         <div className="w-full flex flex-col items-center gap-4">
-          <span className="text-xs sm:text-sm font-black text-neutral-500 uppercase tracking-widest text-center px-2">Version B: Text-Heavy Chips</span>
+          <span className="text-xs sm:text-sm font-black text-[#37C556] uppercase tracking-widest text-center px-2">Version B: Text-Heavy Chips (Winner)</span>
           
           <div className="w-full max-w-[270px] sm:max-w-[300px] aspect-[9/18.5] border-[4px] border-neutral-900 rounded-[2.5rem] bg-[#4B5563] shadow-xl overflow-hidden relative flex flex-col">
             {/* Notch */}

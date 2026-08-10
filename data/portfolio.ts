@@ -240,7 +240,7 @@ export const portfolioData = {
       testing: [
         {
           title: "A/B Testing: Icon-Centric Grid (A) vs. Text-Heavy Chips (B)",
-          description: "We compared icon-centric grid chips with text-heavy chips for sports category selection. Version A (Icon-Centric) was selected as the winner; in fast-paced live environments, visual sports icons minimized cognitive load and enabled instant recognition, raising setup CTR by 28% and completion rate by 34%."
+          description: "We compared icon-centric grid chips with text-heavy chips for sports category selection. Version B (Text-Heavy Chips) was selected as the winner; in fast-paced live environments, text-heavy chips minimized cognitive load and enabled instant recognition, raising setup CTR by 28% and completion rate by 34%."
         }
       ],
       impact: {

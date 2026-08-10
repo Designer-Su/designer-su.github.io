@@ -15,6 +15,9 @@ export default function Header() {
               <Link href="/about" className="hover:text-foreground transition-colors">
                 About me
               </Link>
+              <Link href="/metaverse" className="hover:text-foreground transition-colors">
+                Metaverse
+              </Link>
               <Link href="/#uxui" className="hover:text-foreground transition-colors">
                 UX/UI
               </Link>
