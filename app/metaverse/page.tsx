@@ -138,45 +138,99 @@ export default function MetaversePage() {
           </div>
 
           {/* CMYK 3-Market Architecture */}
-          <div className="flex flex-col gap-6 pt-4 border-t border-foreground/10">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#eab308]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-foreground/50">
-                System Architecture & CMYK Markets
+          <div className="flex flex-col gap-6 pt-6 border-t border-foreground/10">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#06b6d4]" />
+                <span className="text-xs font-bold uppercase tracking-wider text-foreground/50">
+                  System Architecture & CMYK Markets
+                </span>
+              </div>
+              <span className="text-xs font-mono text-foreground/40 hidden sm:inline-block">
+                3056 AD // ECOSYSTEM FLOW
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-              <div className="flex flex-col gap-2 p-6 rounded-2xl bg-foreground/[0.02] border border-foreground/5">
-                <span className="text-xs font-bold text-foreground/40">01</span>
-                <h4 className="font-bold text-base">Narrative Concept</h4>
-                <p className="text-xs md:text-sm text-foreground/65 leading-relaxed">
-                  Dystopian 3056 world where color is perceived digitally via AR/VR visor masks.
-                </p>
-              </div>
+            {/* Architecture Spec Panel */}
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.015] overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-foreground/10">
+                
+                {/* 01 Concept */}
+                <div className="p-6 md:p-7 flex flex-col justify-between gap-6 hover:bg-foreground/[0.01] transition-colors">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-mono font-semibold tracking-wider text-foreground/40 uppercase">
+                        01 / Base Layer
+                      </span>
+                      <span className="w-2 h-2 rounded-full bg-foreground/60" />
+                    </div>
+                    <h4 className="font-bold text-base tracking-tight">Narrative Concept</h4>
+                    <p className="text-xs md:text-sm text-foreground/65 leading-relaxed font-normal">
+                      Dystopian 3056 world where color is perceived digitally via AR/VR visor masks.
+                    </p>
+                  </div>
+                  <div className="text-[10px] font-mono tracking-widest text-foreground/35 uppercase">
+                    Worldview Spec
+                  </div>
+                </div>
 
-              <div className="flex flex-col gap-2 p-6 rounded-2xl bg-foreground/[0.02] border-t-2 border-t-[#06b6d4] border-x border-b border-foreground/5">
-                <span className="text-xs font-bold text-[#06b6d4]">02 / Cyan</span>
-                <h4 className="font-bold text-base">Outfit Market</h4>
-                <p className="text-xs md:text-sm text-foreground/65 leading-relaxed">
-                  Garment geometry, silhouette selection, and 3D outfit customization.
-                </p>
-              </div>
+                {/* 02 Cyan */}
+                <div className="p-6 md:p-7 flex flex-col justify-between gap-6 hover:bg-foreground/[0.01] transition-colors">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-mono font-semibold tracking-wider text-[#06b6d4] uppercase">
+                        02 / Cyan Layer
+                      </span>
+                      <span className="w-2 h-2 rounded-full bg-[#06b6d4]" />
+                    </div>
+                    <h4 className="font-bold text-base tracking-tight">Outfit Market</h4>
+                    <p className="text-xs md:text-sm text-foreground/65 leading-relaxed font-normal">
+                      Garment geometry, silhouette selection, and 3D outfit customization.
+                    </p>
+                  </div>
+                  <div className="text-[10px] font-mono tracking-widest text-[#06b6d4]/70 uppercase">
+                    C: 100% M: 0% Y: 0% K: 0%
+                  </div>
+                </div>
 
-              <div className="flex flex-col gap-2 p-6 rounded-2xl bg-foreground/[0.02] border-t-2 border-t-[#ec4899] border-x border-b border-foreground/5">
-                <span className="text-xs font-bold text-[#ec4899]">03 / Magenta</span>
-                <h4 className="font-bold text-base">Texture & Color</h4>
-                <p className="text-xs md:text-sm text-foreground/65 leading-relaxed">
-                  Surface textures, fabric materials, and custom color palette applications.
-                </p>
-              </div>
+                {/* 03 Magenta */}
+                <div className="p-6 md:p-7 flex flex-col justify-between gap-6 hover:bg-foreground/[0.01] transition-colors">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-mono font-semibold tracking-wider text-[#ec4899] uppercase">
+                        03 / Magenta Layer
+                      </span>
+                      <span className="w-2 h-2 rounded-full bg-[#ec4899]" />
+                    </div>
+                    <h4 className="font-bold text-base tracking-tight">Texture & Color</h4>
+                    <p className="text-xs md:text-sm text-foreground/65 leading-relaxed font-normal">
+                      Surface textures, fabric materials, and custom color palette applications.
+                    </p>
+                  </div>
+                  <div className="text-[10px] font-mono tracking-widest text-[#ec4899]/70 uppercase">
+                    C: 0% M: 100% Y: 0% K: 0%
+                  </div>
+                </div>
 
-              <div className="flex flex-col gap-2 p-6 rounded-2xl bg-foreground/[0.02] border-t-2 border-t-[#eab308] border-x border-b border-foreground/5">
-                <span className="text-xs font-bold text-[#eab308]">04 / Yellow</span>
-                <h4 className="font-bold text-base">NFT Exchange</h4>
-                <p className="text-xs md:text-sm text-foreground/65 leading-relaxed">
-                  Ownership verification, barter trading, and digital fashion asset exchange.
-                </p>
+                {/* 04 Yellow */}
+                <div className="p-6 md:p-7 flex flex-col justify-between gap-6 hover:bg-foreground/[0.01] transition-colors">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-mono font-semibold tracking-wider text-[#eab308] uppercase">
+                        04 / Yellow Layer
+                      </span>
+                      <span className="w-2 h-2 rounded-full bg-[#eab308]" />
+                    </div>
+                    <h4 className="font-bold text-base tracking-tight">NFT Exchange</h4>
+                    <p className="text-xs md:text-sm text-foreground/65 leading-relaxed font-normal">
+                      Ownership verification, barter trading, and digital fashion asset exchange.
+                    </p>
+                  </div>
+                  <div className="text-[10px] font-mono tracking-widest text-[#eab308]/70 uppercase">
+                    C: 0% M: 0% Y: 100% K: 0%
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
