@@ -12,7 +12,7 @@ export const portfolioData = {
       role: "Operations Intern",
       company: "SAP Labs Korea",
       period: "Sep 2025 - Present",
-      description: "Optimized SharePoint information architecture to improve accessibility and operational efficiency. Analyzed internal workflows, resolved communication gaps, and produced data-driven reports to support decision-making and employee experience initiatives.",
+      description: "Optimize SharePoint information architecture to improve accessibility and operational efficiency. Analyze internal workflows, resolve communication gaps, and produce data-driven reports to support decision-making and employee experience initiatives.",
     },
     {
       id: 2,
