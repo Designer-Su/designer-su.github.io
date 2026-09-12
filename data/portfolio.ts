@@ -21,6 +21,13 @@ export const portfolioData = {
       period: "Sep 2023 - Dec 2023",
       description: "Led the web and mobile redesign of CameraFi Studio, improving feature engagement by 28% and average session duration by 1.6x through A/B testing and behavior analysis. Prepared CES 2024 exhibition assets and partnered with engineers to deliver production-ready UX improvements.",
     },
+    {
+      id: 3,
+      role: "Sales Assistant",
+      company: "adidas Korea",
+      period: "Jan 2021 - Jan 2023",
+      description: "Provided personalized customer service and managed cashier operations to deliver seamless retail experiences. Executed Visual Merchandising (VMD) floor layouts and product displays aligned with brand guidelines to enhance store presentation and drive customer engagement.",
+    },
   ],
   education: [
     {
