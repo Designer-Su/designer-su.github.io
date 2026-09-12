@@ -24,7 +24,7 @@ export const portfolioData = {
     {
       id: 3,
       role: "Sales Assistant",
-      company: "adidas Korea",
+      company: "Adidas Korea",
       period: "Jan 2021 - Jan 2023",
       description: "Provided personalized customer service and managed cashier operations to deliver seamless retail experiences. Executed Visual Merchandising (VMD) floor layouts and product displays aligned with brand guidelines to enhance store presentation and drive customer engagement.",
     },
