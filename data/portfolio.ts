@@ -285,8 +285,8 @@ export const portfolioData = {
         ]
       },
       userScenarioImages: [
-        { src: "/SF/User%20story%20Emily.png", alt: "Smart Fridge user scenario for Emily" },
-        { src: "/SF/User%20story%20Larry.png", alt: "Smart Fridge user scenario for Larry" }
+        { src: "/SF/emily.JPG", alt: "Smart Fridge user scenario for Emily" },
+        { src: "/SF/Larry.JPG", alt: "Smart Fridge user scenario for Larry" }
       ],
       loFiImages: [
         { src: "/SF/main.png", alt: "Smart Fridge lo-fi main screen" },
