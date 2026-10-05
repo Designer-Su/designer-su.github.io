@@ -1,26 +1,16 @@
 {
-  "name": "designer-su.github.io",
+  "name": "designer-su-monorepo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.2.4",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "dev": "pnpm --parallel dev",
+    "dev:main": "pnpm --filter @designer-su/main dev",
+    "dev:graphic": "pnpm --filter @designer-su/graphic dev",
+    "build:apps": "pnpm --recursive run build",
+    "build": "pnpm build:apps && rm -rf out && mkdir -p out && cp -R apps/main/out/* out/ && mkdir -p out/graphic && cp -R apps/graphic/out/* out/graphic/ && touch out/.nojekyll",
+    "lint": "pnpm --recursive run lint"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
-    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }
